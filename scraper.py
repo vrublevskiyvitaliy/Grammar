@@ -1,5 +1,7 @@
 from selenium import webdriver
+import data
 import time
+
 
 MAIN_URL = "http://nlp.stanford.edu:8080/parser/index.jsp"
 
@@ -10,10 +12,7 @@ def get_driver():
 
 
 def get_sentences():
-    return [
-        'My dog also likes eating sausage.',
-        'Please enter a sentence to be parsed.'
-    ]
+    return data.get_sentances()
 
 
 def get_data(s, driver):
@@ -24,18 +23,24 @@ def get_data(s, driver):
     parseButton.submit()
     time.sleep(5)
     parseTree = driver.find_element_by_id('parse')
-    return parseTree.text
-    y = 0
+    text = parseTree.text
+    text = text.replace('\n','')
+    text = text.replace('\t','')
+    return text
 
 
 def scrap():
     driver = get_driver()
     for s in get_sentences():
-
-        driver.get(MAIN_URL)
-        time.sleep(5)
-        data = get_data(s, driver)
-        time.sleep(5)
+        try:
+            driver.get(MAIN_URL)
+            time.sleep(5)
+            data = get_data(s, driver)
+            with open("tree.txt", "a") as myfile:
+                myfile.write(data + '\n')
+            time.sleep(5)
+        except:
+            pass
 
 if __name__ == "__main__":
     scrap()
