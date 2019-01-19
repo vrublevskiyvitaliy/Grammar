@@ -1,0 +1,27 @@
+Author:
+----------------
+Alexander Pak
+<irokez@gmail.com>
+
+
+Requirements:
+----------------
+You need python 2.5 or higher to execute source code.
+You also need sqlite3 module for python.
+
+
+File structure:
+----------------
+Structure of the folder as follows:
+\- ..
+ |- morph - sqlite database with cached dictionary
+ |- Morphology.py - morphology module
+ \- test.py - test script
+
+
+How to run:
+---------------
+Run test file as follows (it will print word lemmas):
+Run> python test.py sold
+prints: set(['sell'])
+
