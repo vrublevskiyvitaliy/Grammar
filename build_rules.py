@@ -65,7 +65,7 @@ def parse_tree(tree, rules):
 
 
 def save_rules(rules):
-    with open("rules.txt", "a") as myfile:
+    with open("rules_mini.cfg", "w") as myfile:
         for el in rules:
             myfile.write(el + ' -> ')
             myfile.write(' | '.join([' '.join(rule) for rule in rules[el]]))
@@ -86,5 +86,15 @@ def main():
 
 
 
+def main_mini():
+    trees = get_trees()
+    rules = {}
+    print trees[19]
+    parse_tree(trees[19], rules)
+    for el in rules:
+        rules[el] = [y.split('|') for y in set([('|').join(x) for x in rules[el]])]
+    save_rules(rules)
+    y = 0
 
-main()
+
+main_mini()
