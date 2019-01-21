@@ -56,8 +56,16 @@ class Parser:
                 completed = row.rule.lhs
                 for r in self.charts[row.start].rows:
                     if completed == r.next_category():
-                        new = ChartRow(r.rule, r.dot+1, r.start, r, row)
+                        new = ChartRow(r.rule, r.dot + 1, r.start, r, row)
                         chart.add_row(new)
+
+    def print_chart(self, index):
+        if self.debug:
+            print "Parsing charts:"
+            print "-----------{0}-------------".format(index)
+            print self.charts[index]
+            print "-------------------------".format(index)
+
 
     def parse(self):
         '''Main Earley's Parser loop'''
@@ -80,15 +88,12 @@ class Parser:
                 old_length = length
                 length = len(chart)
 
+            # print charts for debuggers
+            self.print_chart(i)
             i+= 1
 
-        # finally, print charts for debuggers
-        if self.debug:
-            print "Parsing charts:"
-            for i in range(len(self.charts)):
-                print "-----------{0}-------------".format(i)
-                print self.charts[i]
-                print "-------------------------".format(i)
+
+
 
     def is_valid_sentence(self):
         '''Returns true if sentence has a complete parse tree'''
