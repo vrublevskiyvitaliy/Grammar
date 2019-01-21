@@ -8,11 +8,12 @@ from grammar import *
 class Parser:
     GAMMA_SYMBOL = 'GAMMA'
 
-    def __init__(self, grammar, sentence, debug=False):
+    def __init__(self, grammar, sentence, debug=False, start_rule='S'):
         '''Initialize parser with grammar and sentence'''
         self.grammar = grammar
         self.sentence = sentence
         self.debug = debug
+        self.start_rule = start_rule
 
         # prepare a chart for every input word
         self.charts = [Chart([]) for i in range(len(self)+1)]
@@ -24,7 +25,7 @@ class Parser:
 
     def init_first_chart(self):
         '''Add initial Gamma rule to first chart'''
-        row = ChartRow(Rule(Parser.GAMMA_SYMBOL, ['S']), 0, 0)
+        row = ChartRow(Rule(Parser.GAMMA_SYMBOL, [self.start_rule]), 0, 0)
         self.charts[0].add_row(row)
 
     def prescan(self, chart, position):

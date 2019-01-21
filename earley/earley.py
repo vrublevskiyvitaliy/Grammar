@@ -9,7 +9,7 @@ from parser import *
 from parse_trees import *
 
 
-def run(grammar_path, s, debug=False):
+def run(grammar_path, s, debug=False, start_rule='S'):
     # load grammar from file
 
     grammar = Grammar.from_file(grammar_path)
@@ -17,7 +17,7 @@ def run(grammar_path, s, debug=False):
     sentence = Sentence.from_string(s)
 
     # run parser
-    earley = Parser(grammar, sentence, debug)
+    earley = Parser(grammar, sentence, debug, start_rule)
     earley.parse()
 
     # output sentence validity

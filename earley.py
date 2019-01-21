@@ -23,7 +23,7 @@ def build_sentence():
 
 
 def main():
-    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_mini.cfg', build_sentence(), True)
+    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_mini.cfg', build_sentence(), True, 'ROOT')
     y = 0
 
 main()
