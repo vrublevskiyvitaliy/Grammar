@@ -1,4 +1,11 @@
 
+BUILD_ALL = 'all'
+BUILD_MINI = 'mini'
+
+MINI_TREES = [19]
+
+MODE = BUILD_MINI
+
 
 def get_trees():
     with open("tree.txt", "r") as myfile:
@@ -30,12 +37,6 @@ def parse_tree(tree, rules):
         if tree[i] not in ['(', ')', ' ']:
             token += tree[i]
         else:
-            # if len(token):
-            #     #while len(stack) <= current_level:
-            #     #    stack.append([])
-            #     current_element['children'].append(token)
-            #     # stack[current_level].append(token)
-            #     token = ''
             if tree[i] == '(':
                 v = []
                 if token:
@@ -61,11 +62,17 @@ def parse_tree(tree, rules):
             token = ''
     root = root['children'][0]
     extract_rules(root, rules)
-    y = 0
+
+
+def get_rules_file():
+    if MODE == BUILD_MINI:
+        return 'rules_mini.cfg'
+    else:
+        return 'rules.cfg'
 
 
 def save_rules(rules):
-    with open("rules_mini.cfg", "w") as myfile:
+    with open(get_rules_file(), "w") as myfile:
         for el in rules:
             myfile.write(el + ' -> ')
             myfile.write(' | '.join([' '.join(rule) for rule in rules[el]]))
@@ -75,26 +82,26 @@ def save_rules(rules):
 
 def main():
     trees = get_trees()
-#    print trees[0]
     rules = {}
     for tree in trees:
         parse_tree(tree, rules)
     for el in rules:
         rules[el] = [y.split('|') for y in set([('|').join(x) for x in rules[el]])]
     save_rules(rules)
-    y = 0
-
 
 
 def main_mini():
     trees = get_trees()
     rules = {}
-    print trees[19]
-    parse_tree(trees[19], rules)
+    for i in MINI_TREES:
+        print trees[i]
+        parse_tree(trees[i], rules)
     for el in rules:
         rules[el] = [y.split('|') for y in set([('|').join(x) for x in rules[el]])]
     save_rules(rules)
-    y = 0
 
 
-main_mini()
+if MODE == BUILD_MINI:
+    main_mini()
+else:
+    main()
