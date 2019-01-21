@@ -45,8 +45,11 @@ class Parser:
             rules = self.grammar[next_cat]
             if rules:
                 for rule in rules:
+                    if rule.is_chart_used(position):
+                        continue
                     new = ChartRow(rule, 0, position)
                     chart.add_row(new)
+                    rule.add_chart(position)
 
     def complete(self, chart, position):
         '''Complete a rule that was done parsing, and
@@ -77,6 +80,10 @@ class Parser:
             chart = self.charts[i]
             self.prescan(chart, i) # scan current input
 
+            if self.debug:
+                print 'After prescan:'
+            self.print_chart(i)
+
             # predict & complete loop
             # rinse & repeat until chart stops changing
             length = len(chart)
@@ -87,7 +94,9 @@ class Parser:
 
                 old_length = length
                 length = len(chart)
-
+                if self.debug:
+                    print 'After iteration:'
+                self.print_chart(i)
             # print charts for debuggers
             self.print_chart(i)
             i+= 1

@@ -9,6 +9,7 @@ class Rule:
         '''Initializes grammar rule: LHS -> [RHS]'''
         self.lhs = lhs
         self.rhs = rhs
+        self.already_used_in_charts = []
 
     def __len__(self):
         '''A rule's length is its RHS's length'''
@@ -28,6 +29,13 @@ class Rule:
             if self.rhs == other.rhs:
                 return 0
         return 1
+
+    def add_chart(self, index):
+        self.already_used_in_charts.append(index)
+
+    def is_chart_used(self, index):
+        return index in self.already_used_in_charts
+
 
 class Grammar:
     def __init__(self):
