@@ -71,3 +71,5 @@ class ChartRow:
             return self.rule[self.dot-1]
         return None
 
+    def get_left_len(self):
+        return len(self) - self.dot

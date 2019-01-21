@@ -37,7 +37,7 @@ class Parser:
             for rule in rules:
                 chart.add_row(ChartRow(rule, 1, position-1))
 
-    def predict(self, chart, position):
+    def predict(self, chart, position, words_left):
         '''Predict next parse by looking up grammar rules
            for pending categories in current chart'''
         for row in chart.rows:
@@ -47,11 +47,14 @@ class Parser:
                 for rule in rules:
                     if rule.is_chart_used(position):
                         continue
+                    # valid only when we can guarantee there will be not a rule A -> epsilon
+                    if len(rule.rhs) > words_left:
+                        continue
                     new = ChartRow(rule, 0, position)
                     chart.add_row(new)
                     rule.add_chart(position)
 
-    def complete(self, chart, position):
+    def complete(self, chart, position, words_left):
         '''Complete a rule that was done parsing, and
            promote previously pending rules'''
         for row in chart.rows:
@@ -60,6 +63,8 @@ class Parser:
                 for r in self.charts[row.start].rows:
                     if completed == r.next_category():
                         new = ChartRow(r.rule, r.dot + 1, r.start, r, row)
+                        if new.get_left_len() > words_left:
+                            continue
                         chart.add_row(new)
 
     def print_chart(self, index):
@@ -75,8 +80,9 @@ class Parser:
         self.init_first_chart()
 
         i = 0
+        sentence_len = len(self.charts)
         # we go word by word
-        while i < len(self.charts):
+        while i < sentence_len:
             chart = self.charts[i]
             self.prescan(chart, i) # scan current input
 
@@ -89,8 +95,8 @@ class Parser:
             length = len(chart)
             old_length = -1
             while old_length != length:
-                self.predict(chart, i)
-                self.complete(chart, i)
+                self.predict(chart, i, len(self.charts) - i - 1)
+                self.complete(chart, i, len(self.charts) - i - 1)
 
                 old_length = length
                 length = len(chart)
