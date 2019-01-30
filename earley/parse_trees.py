@@ -21,6 +21,7 @@ class TreeNode:
 
     def __repr__(self):
         return self.repr_ierarhical_notation()
+        return self.repr_bracket_notation()
 
     def repr_bracket_notation(self):
         '''Returns string representation of a tree in bracket notation'''
@@ -31,15 +32,15 @@ class TreeNode:
         st += ' ]'
         return st
 
-    def repr_ierarhical_notation(self, indent=0):
+    def repr_ierarhical_notation(self, level=0):
         '''Returns string representation of a tree in ierarhical notation'''
-        st = ' ' * indent
+        st = ' ' *  level * TreeNode.INDENT_STEP
         st += "{0}".format(self.body)
         st += "\n"
         if not self.is_leaf():
             for child in self.children:
                 #st += ' ' * (indent + TreeNode.INDENT_STEP)
-                st += child.repr_ierarhical_notation(indent + TreeNode.INDENT_STEP)
+                st += child.repr_ierarhical_notation(level + 1)
         return st
 
     def is_leaf(self):
@@ -55,7 +56,7 @@ class ParseTrees:
 
         self.nodes = []
         for root in parser.complete_parses:
-            self.nodes.extend(self.build_nodes(root))
+            self.nodes.extend([self.build_nodes_ierarchical(root)])
 
     def __len__(self):
         '''Trees count'''
@@ -82,10 +83,31 @@ class ParseTrees:
         prev = root.previous
         left = []
         while prev and prev.dot > 0:
-            left[:0] = [self.build_nodes(prev)]
-            prev = prev.previous
+           left[:0] = [self.build_nodes(prev)]
+           prev = prev.previous
 
         left.append(down)
 
         return [TreeNode(root.rule.lhs, children) for children in left]
+
+    def build_nodes_ierarchical(self, root, terminal_to_traverse_back=None):
+        '''Recursively create subtree for given parse chart row'''
+        nodes = []
+
+        # find subtrees of current symbol
+        if root.completing:
+            down = self.build_nodes_ierarchical(root.completing)
+        else:
+            down = TreeNode(root.prev_category())
+
+        # prepend subtrees of previous symbols
+        prev = root.previous
+        left = []
+        while prev and prev.dot > 0 and terminal_to_traverse_back is None:
+           left[:0] = [self.build_nodes_ierarchical(prev, 1).children[0]]
+           prev = prev.previous
+
+        left.append(down)
+
+        return TreeNode(root.rule.lhs, left)
 
