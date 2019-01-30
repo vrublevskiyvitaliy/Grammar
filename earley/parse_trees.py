@@ -5,6 +5,8 @@
 from operator import add
 
 class TreeNode:
+    INDENT_STEP = 3
+
     def __init__(self, body, children=[]):
         '''Initialize a tree with body and children'''
         self.body = body
@@ -18,11 +20,26 @@ class TreeNode:
             return reduce(add, [len(child) for child in self.children])
 
     def __repr__(self):
+        return self.repr_ierarhical_notation()
+
+    def repr_bracket_notation(self):
         '''Returns string representation of a tree in bracket notation'''
+
         st = "[.{0} ".format(self.body)
         if not self.is_leaf():
-            st+= ' '.join([str(child) for child in self.children])
-        st+= ' ]'
+            st += ' '.join([str(child) for child in self.children])
+        st += ' ]'
+        return st
+
+    def repr_ierarhical_notation(self, indent=0):
+        '''Returns string representation of a tree in ierarhical notation'''
+        st = ' ' * indent
+        st += "{0}".format(self.body)
+        st += "\n"
+        if not self.is_leaf():
+            for child in self.children:
+                #st += ' ' * (indent + TreeNode.INDENT_STEP)
+                st += child.repr_ierarhical_notation(indent + TreeNode.INDENT_STEP)
         return st
 
     def is_leaf(self):
