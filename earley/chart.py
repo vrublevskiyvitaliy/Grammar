@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # coding=utf-8
 # -*- encoding: utf-8 -*-
+from config import *
+
 
 class Chart:
     def __init__(self, rows):
@@ -53,7 +55,7 @@ class ChartRow:
             if self.dot == other.dot:
                 if self.start == other.start:
                     if self.rule == other.rule:
-                        if self.completing == other.completing:
+                        if not GET_ALL_TREES or self.completing == other.completing:
                             return 0
         return 1
 

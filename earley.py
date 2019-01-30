@@ -45,4 +45,4 @@ def main_artificial():
     )
 
 
-main_artificial()
+main()

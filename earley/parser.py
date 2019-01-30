@@ -87,6 +87,7 @@ class Parser:
             chart = self.charts[i]
             self.prescan(chart, i) # scan current input
 
+            print 'Iteration {0}'.format(i)
             if self.debug:
                 print 'After prescan:'
             self.print_chart(i)
