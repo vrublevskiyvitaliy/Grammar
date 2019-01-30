@@ -7,12 +7,19 @@ from earley.earley import run
 def get_sentence():
     #```time/time<N> flies/fly<N>/fly<V> like/like<V>/like<P> an/a<D> arrow/arrow<N>```
 
-    #s = 'Call/Call<VB> me/me<PRP> Ishmael/Ishmael<JJ> ./.<.>'
-    '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
-    # s = 'Are/Are<VBP> the/the<DT> green/green<JJ> fields/fields<NNS> gone/gone<VBN> ?/?<.>'
-    s = 'Are the green fields gone?'
-    return s
+    # s = 'Call/Call<VB> me/me<PRP> Ishmael/Ishmael<JJ> ./.<.>'
+    mistakes = [
+        'The notion of authority also extended vertically.',
+    ]
+    s = 'Call me Ishmael.'
 
+    s = 'I gone home.'
+    # s = word_tokenize(s)
+    # s_with_pos = nltk.pos_tag(s)
+    # '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
+    # s = 'Are/Are<VBP> the/the<DT> green/green<JJ> fields/fields<NNS> gone/gone<VBN> ?/?<.>'
+    # s = 'Are the green fields gone?'
+    return s
 
 def build_sentence():
     s = get_sentence()
@@ -23,9 +30,19 @@ def build_sentence():
 
 
 def main():
-    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg', build_sentence(), True, 'ROOT')
+    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg', build_sentence(), False, 'ROOT')
     # run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_mini.cfg', build_sentence(), True, 'ROOT')
     y = 0
 
-main()
-print build_sentence()
+
+def main_artificial():
+    s = 'a/a<A> b/b<B> b/b<B>'
+    run(
+        '/Users/vitaliyvrublevskiy/projects/Grammar/rules_artificial.cfg',
+        s,
+        True,
+        'ROOT'
+    )
+
+
+main_artificial()

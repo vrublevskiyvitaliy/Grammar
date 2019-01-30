@@ -23,6 +23,7 @@ class Chart:
         if not row in self.rows:
             self.rows.append(row)
 
+
 class ChartRow:
     def __init__(self, rule, dot=0, start=0, previous=None, completing=None):
         '''Initialize a chart row, consisting of a rule, a position
@@ -52,7 +53,8 @@ class ChartRow:
             if self.dot == other.dot:
                 if self.start == other.start:
                     if self.rule == other.rule:
-                        return 0
+                        if self.completing == other.completing:
+                            return 0
         return 1
 
     def is_complete(self):
