@@ -7,6 +7,7 @@ from grammar import *
 
 class Parser:
     GAMMA_SYMBOL = 'GAMMA'
+    TRIM_BY_LENGTH = True
 
     def __init__(self, grammar, sentence, debug=False, start_rule='S'):
         '''Initialize parser with grammar and sentence'''
@@ -48,7 +49,7 @@ class Parser:
                     if rule.is_chart_used(position):
                         continue
                     # valid only when we can guarantee there will be not a rule A -> epsilon
-                    if len(rule.rhs) > words_left:
+                    if Parser.TRIM_BY_LENGTH and len(rule.rhs) > words_left:
                         continue
                     new = ChartRow(rule, 0, position)
                     chart.add_row(new)
@@ -63,7 +64,7 @@ class Parser:
                 for r in self.charts[row.start].rows:
                     if completed == r.next_category():
                         new = ChartRow(r.rule, r.dot + 1, r.start, r, row)
-                        if new.get_left_len() > words_left:
+                        if Parser.TRIM_BY_LENGTH and new.get_left_len() > words_left:
                             continue
                         chart.add_row(new)
 
