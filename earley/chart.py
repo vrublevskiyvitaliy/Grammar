@@ -8,6 +8,7 @@ class Chart:
     def __init__(self, rows):
         '''An Earley chart is a list of rows for every input word'''
         self.rows = rows
+        self.rules_count = {}
 
     def __len__(self):
         '''Chart length'''
@@ -23,7 +24,21 @@ class Chart:
     def add_row(self, row):
         '''Add a row to chart, only if wasn't already there'''
         if not row in self.rows:
-            self.rows.append(row)
+            if self.should_add_row(row):
+                self.rows.append(row)
+
+    def should_add_row(self, row):
+        if not GET_ALL_TREES:
+            return True
+        hash = str(row)
+        if hash not in self.rules_count:
+            self.rules_count[hash] = 0
+
+        if self.rules_count[hash] >= AMOUNT_OF_DUPLICATE_RULES:
+            return False
+        else:
+            self.rules_count[hash] += 1
+            return True
 
 
 class ChartRow:
@@ -45,7 +60,7 @@ class ChartRow:
         '''Nice string representation:
             <Row <LHS -> RHS .> [start]>'''
         rhs = list(self.rule.rhs)
-        rhs.insert(self.dot, '.')
+        rhs.insert(self.dot, '*')
         rule_str = "[{0} -> {1}]".format(self.rule.lhs, ' '.join(rhs))
         return "<Row {0} [{1}]>".format(rule_str, self.start)
 
