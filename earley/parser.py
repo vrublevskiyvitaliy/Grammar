@@ -41,7 +41,8 @@ class Parser:
     def predict(self, chart, position, words_left):
         '''Predict next parse by looking up grammar rules
            for pending categories in current chart'''
-        for row in chart.rows:
+        while chart.predict_row_index < len(chart):
+            row = chart.rows[chart.predict_row_index]
             if RULES_PER_CHART and RULES_PER_CHART <= len(chart.rows):
                 break
             next_cat = row.next_category()
@@ -56,6 +57,7 @@ class Parser:
                     new = ChartRow(rule, 0, position)
                     chart.add_row(new)
                     rule.add_chart(position)
+            chart.predict_row_index += 1
 
     def complete(self, chart, position, words_left):
         '''Complete a rule that was done parsing, and

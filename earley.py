@@ -3,6 +3,15 @@ from nltk import word_tokenize
 
 from earley.earley import run
 
+def timing(f):
+    def wrap(*args):
+        import time
+        time1 = time.time()
+        ret = f(*args)
+        time2 = time.time()
+        print '%s function took %0.3f s' % (f.func_name, (time2-time1))
+        return ret
+    return wrap
 
 def get_sentence():
     #```time/time<N> flies/fly<N>/fly<V> like/like<V>/like<P> an/a<D> arrow/arrow<N>```
@@ -22,7 +31,7 @@ def get_sentence():
     # s_with_pos = nltk.pos_tag(s)
     # '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
     # s = 'Are/Are<VBP> the/the<DT> green/green<JJ> fields/fields<NNS> gone/gone<VBN> ?/?<.>'
-    s = 'Are the green fields gone?'
+    # s = 'Are the green fields gone?'
     return s
 
 
@@ -34,6 +43,7 @@ def build_sentence():
     return s
 
 
+@timing
 def main():
     run('/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg', build_sentence(), False, 'ROOT')
 
@@ -52,5 +62,7 @@ def main_artificial():
     )
 
 
-main_nltk_rules()
+
+
+main()
 print build_sentence()

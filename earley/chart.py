@@ -9,6 +9,7 @@ class Chart:
         '''An Earley chart is a list of rows for every input word'''
         self.rows = rows
         self.rules_count = {}
+        self.predict_row_index = 0
 
     def __len__(self):
         '''Chart length'''
