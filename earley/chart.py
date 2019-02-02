@@ -10,6 +10,7 @@ class Chart:
         self.rows = rows
         self.rules_count = {}
         self.predict_row_index = 0
+        self.hash_set = set()
 
     def __len__(self):
         '''Chart length'''
@@ -24,9 +25,10 @@ class Chart:
 
     def add_row(self, row):
         '''Add a row to chart, only if wasn't already there'''
-        if not row in self.rows:
+        if not row in self.hash_set:
             if self.should_add_row(row):
                 self.rows.append(row)
+                self.hash_set.add(row)
 
     def should_add_row(self, row):
         if not GET_ALL_TREES:
@@ -93,3 +95,11 @@ class ChartRow:
 
     def get_left_len(self):
         return len(self) - self.dot
+
+    def __hash__(self):
+        if not GET_ALL_TREES:
+            key = "{0} | {1} | {2} | {3}".format(len(self), self.dot, self.start, self.rule)
+        else:
+            key = "{0} | {1} | {2} | {3} | {4}".format(len(self), self.dot, self.start, self.rule, self.completing)
+
+        return hash(key)

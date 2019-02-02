@@ -59,6 +59,7 @@ class Parser:
                     rule.add_chart(position)
             chart.predict_row_index += 1
 
+
     def complete(self, chart, position, words_left):
         '''Complete a rule that was done parsing, and
            promote previously pending rules'''
