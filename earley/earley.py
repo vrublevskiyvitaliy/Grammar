@@ -9,7 +9,7 @@ from parser import *
 from parse_trees import *
 
 
-def run(grammar_path, s, debug=False, start_rule='S'):
+def run(grammar_path, s, debug=False, start_rule='S', lazy=False):
     # load grammar from file
 
     grammar = Grammar.from_file(grammar_path)
@@ -17,10 +17,13 @@ def run(grammar_path, s, debug=False, start_rule='S'):
     sentence = Sentence.from_string(s)
 
     # run parser
-    earley = Parser(grammar, sentence, debug, start_rule)
-    earley.parse()
+    if lazy:
+        earley = ParserLazy(grammar, sentence, debug, start_rule)
+    else:
+        earley = Parser(grammar, sentence, debug, start_rule)
 
-    # output sentence validity
+
+    earley.parse()  # output sentence validity
     if earley.is_valid_sentence():
         print '==> Sentence is valid.'
 
@@ -29,4 +32,3 @@ def run(grammar_path, s, debug=False, start_rule='S'):
         print trees
     else:
         print '==> Sentence is invalid.'
-

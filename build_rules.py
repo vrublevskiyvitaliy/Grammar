@@ -3,6 +3,7 @@ BUILD_ALL = 'all'
 BUILD_MINI = 'mini'
 
 MINI_TREES = [19]
+MINI_TREES = xrange(100, 200, 1)
 
 MODE = BUILD_MINI
 
