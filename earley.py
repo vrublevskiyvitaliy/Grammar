@@ -31,7 +31,7 @@ def get_sentence():
     # s_with_pos = nltk.pos_tag(s)
     # '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
     # s = 'Are/Are<VBP> the/the<DT> green/green<JJ> fields/fields<NNS> gone/gone<VBN> ?/?<.>'
-    # s = 'Are the green fields gone?'
+    s = 'Are the green fields gone?'
     return s
 
 
@@ -45,7 +45,12 @@ def build_sentence():
 
 @timing
 def main():
-    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg', build_sentence(), False, 'ROOT')
+    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg', build_sentence(), False, 'ROOT', True)
+
+
+@timing
+def main_mini():
+    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_mini.cfg', build_sentence(), False, 'ROOT', True)
 
 
 def main_nltk_rules():

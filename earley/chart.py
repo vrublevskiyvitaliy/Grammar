@@ -10,7 +10,10 @@ class Chart:
         self.rows = rows
         self.rules_count = {}
         self.predict_row_index = 0
+        self.complete_row_index = 0
         self.hash_set = set()
+        self.is_complete = False
+        self.is_prescaned = False
 
     def __len__(self):
         '''Chart length'''
@@ -45,7 +48,7 @@ class Chart:
 
 
 class ChartRow:
-    def __init__(self, rule, dot=0, start=0, previous=None, completing=None):
+    def __init__(self, rule, dot=0, start=0, previous=None, completing=None, is_token_rule=False, parent=None):
         '''Initialize a chart row, consisting of a rule, a position
            index inside the rule, index of starting chart and
            pointers to parent rows'''
@@ -54,6 +57,8 @@ class ChartRow:
         self.start = start
         self.completing = completing
         self.previous = previous
+        self.is_token_rule = is_token_rule
+        self.parent = parent
 
     def __len__(self):
         '''A chart's length is its rule's length'''
