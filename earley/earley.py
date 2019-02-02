@@ -17,14 +17,13 @@ def run(grammar_path, s, debug=False, start_rule='S', lazy=False):
     sentence = Sentence.from_string(s)
 
     # run parser
-    earley = Parser(grammar, sentence, debug, start_rule)
-
     if lazy:
-        earley.parse_lazy()
+        earley = ParserLazy(grammar, sentence, debug, start_rule)
     else:
-        earley.parse()
+        earley = Parser(grammar, sentence, debug, start_rule)
 
-    # output sentence validity
+
+    earley.parse()  # output sentence validity
     if earley.is_valid_sentence():
         print '==> Sentence is valid.'
 

@@ -26,12 +26,12 @@ def get_sentence():
         'I gone home.',
     ]
     #
-    s = mistakes[1]
+    s = mistakes[3]
     # s = word_tokenize(s)
     # s_with_pos = nltk.pos_tag(s)
     # '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
     # s = 'Are/Are<VBP> the/the<DT> green/green<JJ> fields/fields<NNS> gone/gone<VBN> ?/?<.>'
-    s = 'Are the green fields gone?'
+    # s = 'Are the green fields gone?'
     return s
 
 
@@ -45,8 +45,14 @@ def build_sentence():
 
 @timing
 def main():
-    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg', build_sentence(), False, 'ROOT', True)
-
+    run(
+        grammar_path='/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg',
+        s=build_sentence(),
+        debug=False,
+        start_rule='ROOT',
+        lazy=True
+        # lazy=False
+    )
 
 @timing
 def main_mini():
@@ -65,8 +71,6 @@ def main_artificial():
         True,
         'ROOT'
     )
-
-
 
 
 main()
