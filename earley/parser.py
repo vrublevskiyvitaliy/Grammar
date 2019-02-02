@@ -42,6 +42,8 @@ class Parser:
         '''Predict next parse by looking up grammar rules
            for pending categories in current chart'''
         for row in chart.rows:
+            if RULES_PER_CHART and RULES_PER_CHART <= len(chart.rows):
+                break
             next_cat = row.next_category()
             rules = self.grammar[next_cat]
             if rules:
