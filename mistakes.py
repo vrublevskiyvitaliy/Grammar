@@ -2,10 +2,7 @@ import nltk
 from nltk import word_tokenize
 
 
-
-
 def main():
-
     sentances = [
         'I go home.',
         'I went home.',

@@ -157,6 +157,7 @@ class ParserLazy(Parser):
     def predict(self, chart, position, words_left):
         '''Predict next parse by looking up grammar rules
            for pending categories in current chart'''
+        read_next_token = False
         while chart.predict_row_index < len(chart):
             row = chart.rows[chart.predict_row_index]
             if RULES_PER_CHART and RULES_PER_CHART <= len(chart.rows):
@@ -165,9 +166,11 @@ class ParserLazy(Parser):
             if next_cat in self.chart_complete_tokens[position]:
                 self.predict_complete(next_cat, position, row)
                 chart.predict_row_index += 1
-                return True
+                if LAZY_FIRST_MATCH_ITERATION:
+                    return True
+                read_next_token = True
+                chart.predict_row_index += 1
             else:
-                read_next_token = False
                 rules = self.grammar[next_cat]
                 if rules:
                     for rule in rules:
@@ -186,9 +189,9 @@ class ParserLazy(Parser):
                             self.predict_complete(new_next_cat, position, new)
 
                 chart.predict_row_index += 1
-                if read_next_token:
+                if read_next_token and LAZY_FIRST_MATCH_ITERATION:
                     return True
-        return False
+        return read_next_token
 
     def complete(self, chart, position, words_left, force=False):
         '''Complete a rule that was done parsing, and

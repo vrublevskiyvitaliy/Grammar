@@ -17,7 +17,7 @@ def get_sentence():
     #
     s = mistakes[4]
     s = 'While cleaning my external hard drive, I found this old project of mine.'
-    # s = word_tokenize(s)
+    s = word_tokenize(s)
     # s_with_pos = nltk.pos_tag(s)
     # '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
     # s = 'Are/Are<VBP> the/the<DT> green/green<JJ> fields/fields<NNS> gone/gone<VBN> ?/?<.>'
@@ -55,4 +55,4 @@ def main_artificial():
 
 
 main()
-print build_sentence()
+print build_sentence(get_sentence())
