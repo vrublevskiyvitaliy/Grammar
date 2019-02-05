@@ -7,7 +7,7 @@ BUILD_MINI = 'mini'
 MINI_TREES = [19]
 MINI_TREES = xrange(100, 200, 1)
 
-MODE = BUILD_MINI
+MODE = BUILD_ALL
 
 
 def get_trees():
@@ -16,15 +16,15 @@ def get_trees():
         return lines
 
 
-def extract_rules(tree, grammar):
+def extract_rules(tree, grammar, source):
     if tree['children']:
         seq = []
         for el in tree['children']:
             seq.append(el['v'][0])
         head = tree['v'][0]
-        grammar.add_rule(Rule(head, seq))
+        grammar.add_rule(Rule(head, seq, source))
         for el in tree['children']:
-            extract_rules(el, grammar)
+            extract_rules(el, grammar, source)
 
 
 def parse_tree(tree, grammar):
@@ -62,7 +62,7 @@ def parse_tree(tree, grammar):
 
             token = ''
     root = root['children'][0]
-    extract_rules(root, grammar)
+    extract_rules(root, grammar, tree)
 
 
 def get_rules_file():
@@ -72,12 +72,19 @@ def get_rules_file():
         return 'rules.cfg'
 
 
-def main():
+def get_main_grammar():
     grammar = Grammar()
     trees = get_trees()
     for tree in trees:
         parse_tree(tree, grammar)
+
+    return grammar
+
+
+def main():
+    grammar = get_main_grammar()
     grammar.save_to_file(get_rules_file())
+    return
 
 
 def main_mini():

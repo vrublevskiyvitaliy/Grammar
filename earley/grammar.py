@@ -4,11 +4,13 @@
 
 import sys
 
+
 class Rule:
-    def __init__(self, lhs, rhs):
+    def __init__(self, lhs, rhs, source=None):
         '''Initializes grammar rule: LHS -> [RHS]'''
         self.lhs = lhs
         self.rhs = rhs
+        self.source = source
         self.already_used_in_charts = []
 
     def __len__(self):
@@ -38,6 +40,8 @@ class Rule:
 
 
 class Grammar:
+    ALLOW_DUPLICATES = False
+
     def __init__(self):
         '''A grammar is a collection of rules, sorted by LHS'''
         self.rules = {}
@@ -62,10 +66,23 @@ class Grammar:
         '''Add a rule to the grammar'''
         lhs = rule.lhs
         if lhs in self.rules:
-            if rule not in self.rules[lhs]:
+            if rule not in self.rules[lhs] or Grammar.ALLOW_DUPLICATES:
                 self.rules[lhs].append(rule)
         else:
             self.rules[lhs] = [rule]
+
+    def get_rule(self, rule):
+        '''Gat a rule from the grammar'''
+        rules = []
+        lhs = rule.lhs
+        if lhs in self.rules:
+            for _r in self.rules[lhs]:
+                if _r == rule:
+                    rules.append(_r)
+
+            return rules
+        else:
+            return None
 
     @staticmethod
     def from_file(filename):

@@ -2,8 +2,7 @@ import nltk
 from nltk import word_tokenize
 from earley.earley import run
 from common import *
-from earley.grammar import *
-
+from build_rules import *
 
 @timing
 def parse(s):
@@ -37,7 +36,10 @@ def get_trees():
 
 def find_trees_by_rule():
     rule = Rule('NP', ['VBN', 'NN'])
+    grammar = get_main_grammar()
+    rules = grammar.get_rule(rule)
+    for r in rules:
+        print r.source
 
 
-
-main()
+find_trees_by_rule()
