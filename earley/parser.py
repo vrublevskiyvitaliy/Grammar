@@ -7,7 +7,7 @@ from grammar import *
 
 class Parser:
     GAMMA_SYMBOL = 'GAMMA'
-    TRIM_BY_LENGTH = True
+    TRIM_BY_LENGTH = False
 
     def __init__(self, grammar, sentence, debug=False, start_rule='S'):
         '''Initialize parser with grammar and sentence'''

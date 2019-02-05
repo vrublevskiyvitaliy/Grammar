@@ -1,17 +1,6 @@
-import nltk
-from nltk import word_tokenize
-
+from common import *
 from earley.earley import run
 
-def timing(f):
-    def wrap(*args):
-        import time
-        time1 = time.time()
-        ret = f(*args)
-        time2 = time.time()
-        print '%s function took %0.3f s' % (f.func_name, (time2-time1))
-        return ret
-    return wrap
 
 def get_sentence():
     #```time/time<N> flies/fly<N>/fly<V> like/like<V>/like<P> an/a<D> arrow/arrow<N>```
@@ -26,7 +15,8 @@ def get_sentence():
         'I gone home.',
     ]
     #
-    s = mistakes[3]
+    s = mistakes[4]
+    s = 'While cleaning my external hard drive, I found this old project of mine.'
     # s = word_tokenize(s)
     # s_with_pos = nltk.pos_tag(s)
     # '(ROOT  (SQ (VBP Are)    (NP (DT the) (JJ green) (NNS fields))    (ADJP (VBN gone))    (. ?)))'
@@ -34,20 +24,11 @@ def get_sentence():
     # s = 'Are the green fields gone?'
     return s
 
-
-def build_sentence():
-    s = get_sentence()
-    text = word_tokenize(s)
-    s_with_pos = nltk.pos_tag(text)
-    s = ' '.join([x[0] + '/' + x[0] + '<' + x[1] + '>' for x in s_with_pos])
-    return s
-
-
 @timing
 def main():
     run(
         grammar_path='/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg',
-        s=build_sentence(),
+        s=build_sentence(get_sentence()),
         debug=False,
         start_rule='ROOT',
         lazy=True
@@ -56,11 +37,11 @@ def main():
 
 @timing
 def main_mini():
-    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_mini.cfg', build_sentence(), False, 'ROOT', True)
+    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_mini.cfg', build_sentence(get_sentence()), False, 'ROOT', True)
 
 
 def main_nltk_rules():
-    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_nltk.cfg', build_sentence(), False, 'S')
+    run('/Users/vitaliyvrublevskiy/projects/Grammar/rules_nltk.cfg', build_sentence(get_sentence()), False, 'S')
 
 
 def main_artificial():
