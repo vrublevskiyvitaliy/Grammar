@@ -18,3 +18,9 @@ def build_sentence(s):
     s_with_pos = nltk.pos_tag(text)
     s = ' '.join([x[0] + '/' + x[0] + '<' + x[1] + '>' for x in s_with_pos])
     return s
+
+
+def get_termainals():
+    from nltk.data import load
+    tagdict = load('help/tagsets/upenn_tagset.pickle')
+    return tagdict.keys()

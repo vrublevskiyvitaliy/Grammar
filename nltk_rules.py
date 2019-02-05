@@ -3,10 +3,7 @@ from nltk.grammar import Nonterminal
 from nltk.corpus import treebank
 
 
-def get_termainals():
-    from nltk.data import load
-    tagdict = load('help/tagsets/upenn_tagset.pickle')
-    return tagdict.keys()
+
 
 
 def remove_last_number(s, char='-'):

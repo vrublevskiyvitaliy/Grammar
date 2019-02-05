@@ -56,7 +56,7 @@ class Grammar:
         if lhs in self.rules:
             return self.rules[lhs]
         else:
-            return None
+            return []
 
     def add_rule(self, rule):
         '''Add a rule to the grammar'''
@@ -89,3 +89,10 @@ class Grammar:
 
         return grammar
 
+    def save_to_file(self, path):
+        with open(path, "w") as myfile:
+            for neterminal in self.rules:
+                myfile.write(neterminal + ' -> ')
+                myfile.write(' | '.join([' '.join(rule) for rule in self.rules[neterminal]]))
+                myfile.write('\n')
+            myfile.close()
