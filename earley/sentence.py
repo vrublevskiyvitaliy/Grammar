@@ -49,7 +49,7 @@ class Sentence:
         lemmarex = re.compile('^[^\/]*')
         tagsrex = re.compile('\/[^\<]*\<([^\>]*)\>')
 
-        sentence = Sentence()
+        sentence = Sentence([])
         words = text.strip().split(' ')
         for word in words:
             lemma = lemmarex.match(word).group(0)
