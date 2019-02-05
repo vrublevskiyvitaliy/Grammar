@@ -83,6 +83,7 @@ def get_main_grammar():
 
 def main():
     grammar = get_main_grammar()
+    grammar.trim_rules_by_context(2)
     grammar.save_to_file(get_rules_file())
     return
 
@@ -97,8 +98,8 @@ def main_mini():
 
     grammar.save_to_file(get_rules_file())
 
-
-if MODE == BUILD_MINI:
-    main_mini()
-else:
-    main()
+if __name__ == '__main__':
+    if MODE == BUILD_MINI:
+        main_mini()
+    else:
+        main()

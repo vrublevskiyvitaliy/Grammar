@@ -6,11 +6,15 @@ import sys
 
 
 class Rule:
-    def __init__(self, lhs, rhs, source=None):
+    def __init__(self, lhs, rhs, context=None):
         '''Initializes grammar rule: LHS -> [RHS]'''
         self.lhs = lhs
         self.rhs = rhs
-        self.source = source
+        if isinstance(context, basestring):
+            self.context = [context]
+        else:
+            self.context = context
+
         self.already_used_in_charts = []
 
     def __len__(self):
@@ -40,8 +44,6 @@ class Rule:
 
 
 class Grammar:
-    ALLOW_DUPLICATES = False
-
     def __init__(self):
         '''A grammar is a collection of rules, sorted by LHS'''
         self.rules = {}
@@ -66,8 +68,13 @@ class Grammar:
         '''Add a rule to the grammar'''
         lhs = rule.lhs
         if lhs in self.rules:
-            if rule not in self.rules[lhs] or Grammar.ALLOW_DUPLICATES:
+            if rule not in self.rules[lhs]:
                 self.rules[lhs].append(rule)
+            else:
+                for _r in self.rules[lhs]:
+                    if _r == rule:
+                        if rule.context:
+                            _r.context += rule.context
         else:
             self.rules[lhs] = [rule]
 
@@ -114,3 +121,9 @@ class Grammar:
                 myfile.write(' | '.join([' '.join(rule) for rule in self.rules[neterminal]]))
                 myfile.write('\n')
             myfile.close()
+
+    def trim_rules_by_context(self, context_len):
+        for lhs in self.rules:
+            for rule in self.rules[lhs]:
+                if len(rule.context) < context_len:
+                    self.rules[lhs].remove(rule)
