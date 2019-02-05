@@ -62,7 +62,8 @@ class Grammar:
         '''Add a rule to the grammar'''
         lhs = rule.lhs
         if lhs in self.rules:
-            self.rules[lhs].append(rule)
+            if rule not in self.rules[lhs]:
+                self.rules[lhs].append(rule)
         else:
             self.rules[lhs] = [rule]
 

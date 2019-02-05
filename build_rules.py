@@ -1,3 +1,5 @@
+from earley.grammar import *
+
 
 BUILD_ALL = 'all'
 BUILD_MINI = 'mini'
@@ -14,20 +16,18 @@ def get_trees():
         return lines
 
 
-def extract_rules(tree, rules):
+def extract_rules(tree, grammar):
     if tree['children']:
         seq = []
         for el in tree['children']:
             seq.append(el['v'][0])
         head = tree['v'][0]
-        if head not in rules:
-            rules[head] = []
-        rules[head].append(seq)
+        grammar.add_rule(Rule(head, seq))
         for el in tree['children']:
-            extract_rules(el, rules)
+            extract_rules(el, grammar)
 
 
-def parse_tree(tree, rules):
+def parse_tree(tree, grammar):
     l = len(tree)
     root = {'v' : [], 'children' : []}
     stack = [root]
@@ -62,7 +62,7 @@ def parse_tree(tree, rules):
 
             token = ''
     root = root['children'][0]
-    extract_rules(root, rules)
+    extract_rules(root, grammar)
 
 
 def get_rules_file():
@@ -72,34 +72,23 @@ def get_rules_file():
         return 'rules.cfg'
 
 
-def save_rules(rules):
-    with open(get_rules_file(), "w") as myfile:
-        for el in rules:
-            myfile.write(el + ' -> ')
-            myfile.write(' | '.join([' '.join(rule) for rule in rules[el]]))
-            myfile.write('\n')
-        myfile.close()
-
-
 def main():
+    grammar = Grammar()
     trees = get_trees()
-    rules = {}
-    for tree in trees:
-        parse_tree(tree, rules)
-    for el in rules:
-        rules[el] = [y.split('|') for y in set([('|').join(x) for x in rules[el]])]
-    save_rules(rules)
+    for tree in grammar:
+        parse_tree(tree, grammar)
+    grammar.save_to_file(get_rules_file())
 
 
 def main_mini():
     trees = get_trees()
-    rules = {}
+    grammar = Grammar()
+
     for i in MINI_TREES:
         print trees[i]
-        parse_tree(trees[i], rules)
-    for el in rules:
-        rules[el] = [y.split('|') for y in set([('|').join(x) for x in rules[el]])]
-    save_rules(rules)
+        parse_tree(trees[i], grammar)
+
+    grammar.save_to_file(get_rules_file())
 
 
 if MODE == BUILD_MINI:
