@@ -75,7 +75,7 @@ def get_rules_file():
 def main():
     grammar = Grammar()
     trees = get_trees()
-    for tree in grammar:
+    for tree in trees:
         parse_tree(tree, grammar)
     grammar.save_to_file(get_rules_file())
 
