@@ -123,6 +123,11 @@ class Grammar:
             myfile.close()
 
     def trim_rules_by_context(self, context_len):
+        '''
+        Delete rules which was found in example text less than context_len.
+        :param context_len:
+        :return:
+        '''
         for lhs in self.rules:
             for rule in self.rules[lhs]:
                 if len(rule.context) < context_len:
