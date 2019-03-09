@@ -9,6 +9,8 @@ MINI_TREES = xrange(100, 200, 1)
 
 MODE = BUILD_ALL
 
+RULES_TRANSITIVE = True
+
 
 def get_trees():
     with open("tree.txt", "r") as myfile:
@@ -25,6 +27,25 @@ def extract_rules(tree, grammar, source):
         grammar.add_rule(Rule(head, seq, source))
         for el in tree['children']:
             extract_rules(el, grammar, source)
+
+
+def extract_rules_transitive(tree, grammar, source):
+    if tree['children']:
+        seq = []
+        head = tree['v'][0]
+        for el in tree['children']:
+            current_rule = extract_rules_transitive(el, grammar, source)
+            if current_rule is None:
+                seq.append(el['v'][0])
+                continue
+            if len(current_rule.rhs) > 1:
+                grammar.add_rule(current_rule)
+                seq.append(el['v'][0])
+            else:
+                seq.append(current_rule.rhs[0])
+        if len(seq) > 0:
+            return Rule(head, seq, source)
+    return None
 
 
 def parse_tree(tree, grammar):
@@ -62,10 +83,16 @@ def parse_tree(tree, grammar):
 
             token = ''
     root = root['children'][0]
-    extract_rules(root, grammar, tree)
+    if RULES_TRANSITIVE:
+        rule = extract_rules_transitive(root, grammar, tree)
+        grammar.add_rule(rule)
+    else:
+        extract_rules(root, grammar, tree)
 
 
 def get_rules_file():
+    if RULES_TRANSITIVE:
+        return 'rules_transitive.cfg'
     if MODE == BUILD_MINI:
         return 'rules_mini.cfg'
     else:
@@ -83,7 +110,7 @@ def get_main_grammar():
 
 def main():
     grammar = get_main_grammar()
-    grammar.trim_rules_by_context(2)
+    grammar.trim_rules_by_context(1)
     grammar.save_to_file(get_rules_file())
     return
 

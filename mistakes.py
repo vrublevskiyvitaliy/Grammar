@@ -7,7 +7,7 @@ from build_rules import *
 @timing
 def parse(s):
     run(
-        grammar_path='/Users/vitaliyvrublevskiy/projects/Grammar/rules.cfg',
+        grammar_path='/Users/vitaliyvrublevskiy/projects/Grammar/rules_transitive.cfg',
         s=build_sentence(s),
         debug=False,
         start_rule='ROOT',
@@ -17,10 +17,10 @@ def parse(s):
 
 def main():
     sentances = [
-        # 'I go home.',
-        # 'I went home.',
+        'I go home.',
+        'I went home.',
         'I gone home.',
-        # 'I has gone home.',
+        'I has gone home.',
     ]
 
     for s in sentances:
@@ -35,7 +35,7 @@ def get_trees():
 
 
 def find_trees_by_rule():
-    rule = Rule('VP', ['VBN'])
+    rule = Rule('NP', ['VBN', 'NN'])
     grammar = get_main_grammar()
     rules = grammar.get_rule(rule)
     for r in rules:
@@ -44,5 +44,5 @@ def find_trees_by_rule():
 
 
 if __name__ == '__main__':
-    # main()
-    find_trees_by_rule()
+     main()
+    # find_trees_by_rule()
