@@ -47,6 +47,7 @@ class TreeNode:
         '''A leaf is a childless node'''
         return len(self.children) == 0
 
+
 class ParseTrees:
     def __init__(self, parser):
         '''Initialize a syntax tree parsing process'''
@@ -56,7 +57,10 @@ class ParseTrees:
 
         self.nodes = []
         for root in parser.complete_parses:
-            self.nodes.extend([self.build_nodes_ierarchical(root)])
+            self.nodes.append({
+                'tree': self.build_nodes_ierarchical(root),
+                'weight': root.weight
+            })
 
     def __len__(self):
         '''Trees count'''
@@ -65,9 +69,9 @@ class ParseTrees:
     def __repr__(self):
         '''String representation of a list of trees with indexes'''
         return '<Parse Trees>\n{0}</Parse Trees>' \
-                    .format('\n'.join("Parse tree #{0}:\n{1}\n\n" \
-                                        .format(i+1, str(self.nodes[i]))
-                                      for i in range(len(self))))
+            .format('\n'.join("Parse tree #{0} weight = {1}:\n{2}\n\n" \
+                                  .format(i + 1, self.nodes[i]['weight'], str(self.nodes[i]['tree']))
+                              for i in range(len(self))))
 
     def build_nodes(self, root):
         '''Recursively create subtree for given parse chart row'''
@@ -91,7 +95,13 @@ class ParseTrees:
         return [TreeNode(root.rule.lhs, children) for children in left]
 
     def build_nodes_ierarchical(self, root, terminal_to_traverse_back=None):
-        '''Recursively create subtree for given parse chart row'''
+        '''
+            Recursively create subtree for given parse chart row
+        :param root: ChartRow
+        :param terminal_to_traverse_back:
+        :return:
+        '''
+        ''''''
         nodes = []
 
         # find subtrees of current symbol
