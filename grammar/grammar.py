@@ -49,7 +49,7 @@ class GrammarWithCorrection(Grammar):
         '''
         grammar = GrammarWithCorrection.from_file(filename)
 
-        terminals = grammar.get_terminals()
+        grammar = GrammarWithCorrection.transform_grammar(grammar)
 
         return grammar
 
@@ -75,3 +75,40 @@ class GrammarWithCorrection(Grammar):
                 grammar.add_rule(r)
 
         return grammar
+
+    @staticmethod
+    def transform_grammar(grammar):
+        terminals = grammar.get_terminals()
+        correction_grammar = GrammarWithCorrection()
+
+        for neterminal in grammar.rules:
+            for rule in grammar.rules[neterminal]:
+                tr_rule = GrammarWithCorrection.get_transformed_rule(rule, terminals)
+                correction_grammar.add_rule(tr_rule)
+
+        for terminal in terminals:
+            rules = GrammarWithCorrection.get_substitution_terminal_rules(terminal, terminals)
+            for rule in rules:
+                correction_grammar.add_rule(rule)
+
+        return correction_grammar
+
+    @staticmethod
+    def get_transformed_rule(rule, terminals):
+        rhs = []
+        for item in rule.rhs:
+            if item in terminals:
+                rhs.append(item + '*')
+            else:
+                rhs.append(item)
+        return RuleWithWeight(rule.lhs, rhs , rule.context, 0)
+
+    @staticmethod
+    def get_substitution_terminal_rules(t, terminals):
+        rules = []
+        for terminal in terminals:
+            if t == terminal:
+                rules.append(RuleWithWeight(t + '*', [t], None, 0))
+            else:
+                rules.append(RuleWithWeight(t + '*', [terminal], None, 1))
+        return rules
