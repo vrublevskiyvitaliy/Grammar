@@ -91,6 +91,11 @@ class GrammarWithCorrection(Grammar):
             for rule in rules:
                 correction_grammar.add_rule(rule)
 
+        for terminal in terminals:
+            rules = GrammarWithCorrection.get_insertion_terminal_rules(terminal, terminals)
+            for rule in rules:
+                correction_grammar.add_rule(rule)
+
         return correction_grammar
 
     @staticmethod
@@ -111,4 +116,11 @@ class GrammarWithCorrection(Grammar):
                 rules.append(RuleWithWeight(t + '*', [t], None, 0))
             else:
                 rules.append(RuleWithWeight(t + '*', [terminal], None, 1))
+        return rules
+
+    @staticmethod
+    def get_insertion_terminal_rules(t, terminals):
+        rules = []
+        for terminal in terminals:
+            rules.append(RuleWithWeight(t + '*', [terminal, t + '*'], None, 1))
         return rules
