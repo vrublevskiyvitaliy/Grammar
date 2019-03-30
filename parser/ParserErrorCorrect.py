@@ -3,6 +3,9 @@
 # -*- encoding: utf-8 -*-
 
 from earley.parser import Parser
+from grammar.grammar import GrammarWithCorrection
+from earley.sentence import Sentence
+from earley.parse_trees import ParseTrees
 
 
 class ParserErrorCorrect(Parser):
@@ -67,7 +70,6 @@ class ParserErrorCorrect(Parser):
                     rule.add_chart(position)
             chart.predict_row_index += 1
 
-
     def complete(self, chart, position, words_left):
         '''Complete a rule that was done parsing, and
            promote previously pending rules'''
@@ -80,13 +82,6 @@ class ParserErrorCorrect(Parser):
                         if Parser.TRIM_BY_LENGTH and new.get_left_len() > words_left:
                             continue
                         chart.add_row(new)
-
-    # def print_chart(self, index):
-    #     if self.debug:
-    #         print "Parsing charts:"
-    #         print "-----------{0}-------------".format(index)
-    #         print self.charts[index]
-    #         print "-------------------------".format(index)
 
 
     def parse(self):
@@ -120,4 +115,19 @@ class ParserErrorCorrect(Parser):
                 self.print_chart(i)
             # print charts for debuggers
             self.print_chart(i)
-            i+= 1
+            i += 1
+
+    @staticmethod
+    def run(grammar_path, s, debug=False, start_rule='S'):
+        grammar = GrammarWithCorrection.build_error_correction_grammar(grammar_path)
+        sentence = Sentence.from_string(s)
+        earley = Parser(grammar, sentence, debug, start_rule)
+
+        earley.parse()  # output sentence validity
+        if earley.is_valid_sentence():
+            print '==> Sentence is valid.'
+            trees = ParseTrees(earley)
+            print 'Valid parse trees:'
+            print trees
+        else:
+            print '==> Sentence is invalid.'
