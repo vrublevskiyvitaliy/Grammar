@@ -136,7 +136,7 @@ class Parser(object):
 
     @staticmethod
     def run(grammar_path, s, debug=False, start_rule='S'):
-        grammar = Grammar.from_file(grammar_path, Grammar.__class__)
+        grammar = Grammar.from_file(grammar_path)
 
         sentence = Sentence.from_string(s)
 
