@@ -89,7 +89,7 @@ class ChartRow:
         rhs = list(self.rule.rhs)
         rhs.insert(self.dot, '*')
         rule_str = "[{0} -> {1}]".format(self.rule.lhs, ' '.join(rhs))
-        return "<Row {0} [{1}]>".format(rule_str, self.start)
+        return "<Row {0} [{1}] Weight = {2}>".format(rule_str, self.start, self.weight)
 
     def __cmp__(self, other):
         '''Two rows are equal if they share the same rule, start and dot'''

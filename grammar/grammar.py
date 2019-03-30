@@ -11,7 +11,7 @@ class RuleWithWeight(Rule):
             Initializes grammar rule: LHS -> [RHS]
             Init weight
         '''
-        self.weight = 0
+        self.weight = weight
         super(RuleWithWeight, self).__init__(lhs, rhs, context)
 
     def __repr__(self):

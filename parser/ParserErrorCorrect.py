@@ -64,7 +64,7 @@ class ParserErrorCorrect(Parser):
                 for rule in rules:
                     if rule.is_chart_used(position):
                         continue
-                    new = ChartRow(rule, 0, position, weight=row.weight + rule.weight)
+                    new = ChartRow(rule, 0, position, weight=rule.weight)
                     chart.add_row(new)
                     rule.add_chart(position)
             chart.predict_row_index += 1
@@ -82,7 +82,8 @@ class ParserErrorCorrect(Parser):
                 completed = row.rule.lhs
                 for r in self.charts[row.start].rows:
                     if completed == r.next_category():
-                        new = ChartRow(r.rule, r.dot + 1, r.start, r, row, weight=row.weight)
+                        weight = row.weight + r.weight
+                        new = ChartRow(r.rule, r.dot + 1, r.start, r, row, weight=weight)
                         # if Parser.TRIM_BY_LENGTH and new.get_left_len() > words_left:
                         #     continue
                         chart.add_row(new)
