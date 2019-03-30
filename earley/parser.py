@@ -5,6 +5,10 @@
 from chart import *
 from grammar import *
 
+from parse_trees import *
+from sentence import *
+
+
 class Parser:
     GAMMA_SYMBOL = 'GAMMA'
     TRIM_BY_LENGTH = False
@@ -129,6 +133,23 @@ class Parser:
             # print charts for debuggers
             self.print_chart(i)
             i+= 1
+
+    @staticmethod
+    def run(grammar_path, s, debug=False, start_rule='S'):
+        grammar = Grammar.from_file(grammar_path)
+
+        sentence = Sentence.from_string(s)
+
+        earley = Parser(grammar, sentence, debug, start_rule)
+
+        earley.parse()  # output sentence validity
+        if earley.is_valid_sentence():
+            print '==> Sentence is valid.'
+            trees = ParseTrees(earley)
+            print 'Valid parse trees:'
+            print trees
+        else:
+            print '==> Sentence is invalid.'
 
 
 class ParserLazy(Parser):
