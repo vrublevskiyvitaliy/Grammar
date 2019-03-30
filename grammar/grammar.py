@@ -49,6 +49,8 @@ class GrammarWithCorrection(Grammar):
         '''
         grammar = GrammarWithCorrection.from_file(filename)
 
+        terminals = grammar.get_terminals()
+
         return grammar
 
     @staticmethod

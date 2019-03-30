@@ -138,3 +138,22 @@ class Grammar:
 
         for key in keys_to_delete:
             self.rules.pop(key)
+
+    def get_neterminals(self):
+        neterminals = []
+        for neterminal in self.rules:
+            neterminals.append(neterminal)
+
+        return neterminals
+
+    def get_terminals(self):
+        neterminals = self.get_neterminals()
+        all = []
+        for neterminal in self.rules:
+            for rule in self.rules[neterminal]:
+                all += rule.rhs
+        all = set(all)
+        neterminals = set(neterminals)
+        terminals = list(all - neterminals)
+
+        return terminals
