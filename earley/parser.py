@@ -9,7 +9,7 @@ from parse_trees import *
 from sentence import *
 
 
-class Parser:
+class Parser(object):
     GAMMA_SYMBOL = 'GAMMA'
     TRIM_BY_LENGTH = False
 
@@ -136,7 +136,7 @@ class Parser:
 
     @staticmethod
     def run(grammar_path, s, debug=False, start_rule='S'):
-        grammar = Grammar.from_file(grammar_path)
+        grammar = Grammar.from_file(grammar_path, Grammar.__class__)
 
         sentence = Sentence.from_string(s)
 

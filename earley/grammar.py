@@ -4,7 +4,8 @@
 
 import sys
 
-class Rule:
+
+class Rule(object):
     def __init__(self, lhs, rhs, context=None):
         '''Initializes grammar rule: LHS -> [RHS]'''
         self.lhs = lhs
