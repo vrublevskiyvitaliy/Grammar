@@ -37,10 +37,21 @@ class Rule(object):
         return 1
 
     def add_chart(self, index):
+        '''
+          We want to track whether current rule was already applied in some chart.
+          If so, we may skip it at the next time at the same chart.
+        :param index:
+        :return:
+        '''
         self.already_used_in_charts.append(index)
 
-    def is_chart_used(self, index):
-        return index in self.already_used_in_charts
+    def is_chart_used(self, chart_index):
+        '''
+        Return whether this rule was already applied in chart.
+        :param chart_index: int
+        :return:
+        '''
+        return chart_index in self.already_used_in_charts
 
 
 class Grammar:

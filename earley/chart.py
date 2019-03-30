@@ -12,6 +12,7 @@ class Chart:
         self.predict_row_index = 0
         self.complete_row_index = 0
         self.hash_set = set()
+        self.hash_to_rule = dict()
         self.is_complete = False
         self.is_prescaned = False
 
@@ -22,16 +23,33 @@ class Chart:
     def __repr__(self):
         '''Nice string representation'''
         st = '<Chart>\n\t'
-        st+= '\n\t'.join(str(r) for r in self.rows)
-        st+= '\n</Chart>'
+        st += '\n\t'.join(str(r) for r in self.rows)
+        st += '\n</Chart>'
         return st
 
     def add_row(self, row):
         '''Add a row to chart, only if wasn't already there'''
+        hash = row.__hash__()
         if not row in self.hash_set:
             if self.should_add_row(row):
                 self.rows.append(row)
                 self.hash_set.add(row)
+                self.hash_to_rule[hash] = {
+                    'weight': row.weight,
+                    'index': len(self.rows) - 1
+                }
+        else:
+            if row.weight < self.hash_to_rule[hash]['weight']:
+                index = self.hash_to_rule[hash]['index']
+                if index > self.predict_row_index:
+                    self.rows[index].weight = row.weight
+                    self.hash_to_rule[hash]['weight'] = row.weight
+                else:
+                    self.rows.append(row)
+                    self.hash_to_rule[hash] = {
+                        'weight': row.weight,
+                        'index': len(self.rows) - 1
+                    }
 
     def should_add_row(self, row):
         if not GET_ALL_TREES:
@@ -48,7 +66,7 @@ class Chart:
 
 
 class ChartRow:
-    def __init__(self, rule, dot=0, start=0, previous=None, completing=None, is_token_rule=False, parent=None):
+    def __init__(self, rule, dot=0, start=0, previous=None, completing=None, is_token_rule=False, parent=None, weight=0):
         '''Initialize a chart row, consisting of a rule, a position
            index inside the rule, index of starting chart and
            pointers to parent rows'''
@@ -59,6 +77,7 @@ class ChartRow:
         self.previous = previous
         self.is_token_rule = is_token_rule
         self.parent = parent
+        self.weight = weight
 
     def __len__(self):
         '''A chart's length is its rule's length'''
