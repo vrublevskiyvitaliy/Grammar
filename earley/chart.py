@@ -13,6 +13,7 @@ class Chart:
         self.complete_row_index = 0
         self.hash_set = set()
         self.hash_to_rule = dict()
+        self.hash_to_weight = dict()
         self.is_complete = False
         self.is_prescaned = False
 
@@ -28,41 +29,51 @@ class Chart:
         return st
 
     def add_row(self, row):
-        '''Add a row to chart, only if wasn't already there'''
-        hash = row.__hash__()
-        if not row in self.hash_set:
-            if self.should_add_row(row):
-                self.rows.append(row)
-                self.hash_set.add(row)
-                self.hash_to_rule[hash] = {
-                    'weight': row.weight,
-                    'index': len(self.rows) - 1
-                }
-        else:
-            if row.weight < self.hash_to_rule[hash]['weight']:
-                index = self.hash_to_rule[hash]['index']
-                if index > self.predict_row_index:
-                    self.rows[index].weight = row.weight
-                    self.hash_to_rule[hash]['weight'] = row.weight
-                else:
-                    self.rows.append(row)
-                    self.hash_to_rule[hash] = {
-                        'weight': row.weight,
-                        'index': len(self.rows) - 1
-                    }
+        if self.should_add_row(row):
+            hash = row.get_hash(use_completing=False)
+
+            self.rows.append(row)
+            self.hash_set.add(hash)
+            self.hash_to_rule[hash] = {
+                'weight': row.weight,
+                'index': len(self.rows) - 1
+            }
+            self.hash_to_weight[hash] = row.weight
 
     def should_add_row(self, row):
-        if not GET_ALL_TREES:
-            return True
-        hash = str(row)
-        if hash not in self.rules_count:
-            self.rules_count[hash] = 0
+        '''
+           Загалом логіка складнувата:
+           звичайний хеш = row.len(self), row.dot, row.start, row.rule
+           повний хеш = row.len(self), row.dot, row.start, row.rule, row.completing
 
-        if self.rules_count[hash] >= AMOUNT_OF_DUPLICATE_RULES:
-            return False
-        else:
-            self.rules_count[hash] += 1
+           Якщо б нам треба було лише одне дерево - тут досить просто:
+              - дивимося по простому хешу
+              - якщо немає, додаємо, якщо є але з гіршою вагою - оновлюємо і даємо кращу вагу
+           Якщо треба не одне дерево - тут логіка складна:
+              - якщо немає по простому хешу - додаємо
+              - якщо збігається по простому хешу - тут скоріше всього треба різати
+              - різати будемо по вазі, якщо вага перевищує мінімальну вагу для простого хеша - викидаємо
+        '''
+        hash = row.get_hash(use_completing=False)
+        #hash_full = row.get_hash(use_completing=True)
+
+        if not hash in self.hash_set:
             return True
+
+        if GET_ALL_TREES:
+            if self.hash_to_weight[hash] > row.weight:
+                return True
+            # we need more trees!!!
+            # we need to handle correclty self.hash_to_weight[hash] == row.weight:
+        else:
+            if self.hash_to_weight[hash] > row.weight:
+                index = self.hash_to_rule[hash]['index']
+                if index > self.predict_row_index:
+                    self.rows[index] = row
+                    self.hash_to_rule[hash]['weight'] = row.weight
+                else:
+                    return True
+        return False
 
 
 class ChartRow:
@@ -121,7 +132,10 @@ class ChartRow:
         return len(self) - self.dot
 
     def __hash__(self):
-        if not GET_ALL_TREES:
+        return get_hash(GET_ALL_TREES)
+
+    def get_hash(self, use_completing=False):
+        if not use_completing:
             key = "{0} | {1} | {2} | {3}".format(len(self), self.dot, self.start, self.rule)
         else:
             key = "{0} | {1} | {2} | {3} | {4}".format(len(self), self.dot, self.start, self.rule, self.completing)

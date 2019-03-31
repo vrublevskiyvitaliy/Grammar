@@ -18,8 +18,16 @@ class RuleWithWeight(Rule):
         '''Nice string representation. Use weight also'''
         return "<Rule {0} -> {1} W = {2}>".format(self.lhs, ' '.join(self.rhs), self.weight)
 
+    def is_epsilon_rule(self):
+        '''
+            Whether this rule is epsilon rule: N -> null.
+        :return: bool
+        '''
+        return len(self.rhs) == 1 and self.rhs[0] == GrammarWithCorrection.EPSILON_RULE
+
 
 class GrammarWithCorrection(Grammar):
+    EPSILON_RULE = '#'
 
     def add_rule(self, rule):
         '''
@@ -96,6 +104,11 @@ class GrammarWithCorrection(Grammar):
             for rule in rules:
                 correction_grammar.add_rule(rule)
 
+        for terminal in terminals:
+            rules = GrammarWithCorrection.get_delete_terminal_rules(terminal, terminals)
+            for rule in rules:
+                correction_grammar.add_rule(rule)
+
         return correction_grammar
 
     @staticmethod
@@ -123,4 +136,10 @@ class GrammarWithCorrection(Grammar):
         rules = []
         for terminal in terminals:
             rules.append(RuleWithWeight(t + '*', [terminal, t + '*'], None, 1))
+        return rules
+
+    @staticmethod
+    def get_delete_terminal_rules(t, terminals):
+        rules = []
+        rules.append(RuleWithWeight(t + '*', [GrammarWithCorrection.EPSILON_RULE], None, 1))
         return rules

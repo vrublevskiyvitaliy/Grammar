@@ -64,7 +64,10 @@ class ParserErrorCorrect(Parser):
                 for rule in rules:
                     if rule.is_chart_used(position):
                         continue
-                    new = ChartRow(rule, 0, position, weight=rule.weight)
+                    dot_position = 0
+                    if rule.is_epsilon_rule():
+                        dot_position = 1
+                    new = ChartRow(rule, dot_position, position, weight=rule.weight)
                     chart.add_row(new)
                     rule.add_chart(position)
             chart.predict_row_index += 1
@@ -82,8 +85,16 @@ class ParserErrorCorrect(Parser):
                 completed = row.rule.lhs
                 for r in self.charts[row.start].rows:
                     if completed == r.next_category():
+
                         weight = row.weight + r.weight
-                        new = ChartRow(r.rule, r.dot + 1, r.start, r, row, weight=weight)
+                        new = ChartRow(
+                            rule=r.rule, # Правило, в якому ми щойно закінчили розкривати нетермінал та пересунули точку
+                            dot=r.dot + 1, # Змістили точку
+                            start=r.start, # Кількість розібраних до цього токенів не змінилася в цьому правилі
+                            previous=r, # Вказуємо на ChartRow в попередніх бакетах який ми продовжуємо
+                            completing=row, # Вказуємо на ChartRow який ми щойно закрили
+                            weight=weight # Вага
+                        )
                         # if Parser.TRIM_BY_LENGTH and new.get_left_len() > words_left:
                         #     continue
                         chart.add_row(new)
