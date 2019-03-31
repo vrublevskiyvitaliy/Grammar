@@ -3,7 +3,7 @@ from parser.ParserErrorCorrect import ParserErrorCorrect
 
 
 def get_sentence():
-    return '((()()'
+    return '()()'
 
 
 def build_sentence(s):

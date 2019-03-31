@@ -12,6 +12,7 @@ class Chart:
         self.predict_row_index = 0
         self.complete_row_index = 0
         self.hash_set = set()
+        self.hash_set_full = set()
         self.hash_to_rule = dict()
         self.hash_to_weight = dict()
         self.is_complete = False
@@ -31,9 +32,11 @@ class Chart:
     def add_row(self, row):
         if self.should_add_row(row):
             hash = row.get_hash(use_completing=False)
+            hash_full = row.get_hash(use_completing=True)
 
             self.rows.append(row)
             self.hash_set.add(hash)
+            self.hash_set_full.add(hash_full)
             self.hash_to_rule[hash] = {
                 'weight': row.weight,
                 'index': len(self.rows) - 1
@@ -55,7 +58,7 @@ class Chart:
               - різати будемо по вазі, якщо вага перевищує мінімальну вагу для простого хеша - викидаємо
         '''
         hash = row.get_hash(use_completing=False)
-        #hash_full = row.get_hash(use_completing=True)
+        hash_full = row.get_hash(use_completing=True)
 
         if not hash in self.hash_set:
             return True
@@ -64,7 +67,8 @@ class Chart:
             if self.hash_to_weight[hash] > row.weight:
                 return True
             # we need more trees!!!
-            # we need to handle correclty self.hash_to_weight[hash] == row.weight:
+            if self.hash_to_weight[hash] == row.weight:
+                return hash_full not in self.hash_set_full
         else:
             if self.hash_to_weight[hash] > row.weight:
                 index = self.hash_to_rule[hash]['index']
