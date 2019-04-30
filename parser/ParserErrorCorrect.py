@@ -17,7 +17,7 @@ class ParserErrorCorrect(Parser):
         super(ParserErrorCorrect, self).__init__(grammar, sentence, debug, start_rule)
 
     @staticmethod
-    def run(grammar_path, s, debug=False, start_rule='S'):
+    def run(grammar_path, s, debug=False, start_rule='ROOT'):
         grammar = GrammarWithCorrection.build_error_correction_grammar(grammar_path)
         sentence = Sentence.from_string(s)
         earley = ParserErrorCorrect(grammar, sentence, debug, start_rule)

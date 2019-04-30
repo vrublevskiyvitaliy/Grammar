@@ -91,8 +91,9 @@ class GrammarWithCorrection(Grammar):
 
         for neterminal in grammar.rules:
             for rule in grammar.rules[neterminal]:
-                tr_rule = GrammarWithCorrection.get_transformed_rule(rule, terminals)
-                correction_grammar.add_rule(tr_rule)
+                tr_rules = GrammarWithCorrection.get_transformed_rule(rule, terminals)
+                for rule in tr_rules:
+                    correction_grammar.add_rule(rule)
 
         for terminal in terminals:
             rules = GrammarWithCorrection.get_substitution_terminal_rules(terminal, terminals)
@@ -114,12 +115,47 @@ class GrammarWithCorrection(Grammar):
     @staticmethod
     def get_transformed_rule(rule, terminals):
         rhs = []
+        neterminal_group = []
+        neterminal_groups = []
         for item in rule.rhs:
             if item in terminals:
+                if len(neterminal_group) > 0:
+                    rhs.append('*'.join(neterminal_group))
+                    neterminal_groups.append(neterminal_group)
+                    neterminal_group = []
                 rhs.append(item + '*')
             else:
-                rhs.append(item)
-        return RuleWithWeight(rule.lhs, rhs , rule.context, 0)
+                neterminal_group.append(item)
+
+        if len(neterminal_group) > 0:
+            rhs.append('*'.join(neterminal_group))
+            neterminal_groups.append(neterminal_group)
+
+        # base rule - original one
+        rules = [RuleWithWeight(rule.lhs, rhs, rule.context, 0)]
+
+        for neterminal_group in neterminal_groups:
+            rules += GrammarWithCorrection.get_swapped_neterminal_group_rules(neterminal_group, rule.context)
+
+        return rules
+
+    @staticmethod
+    def get_swapped_neterminal_group_rules(neterminal_group, context):
+        if len(neterminal_group) < 2:
+            return []
+
+        lhs = '*'.join(neterminal_group)
+
+        rules = []
+        rules.append(RuleWithWeight(lhs, neterminal_group, context, 0))
+
+        for i in range(len(neterminal_group) - 1):
+            rhs = neterminal_group[:]
+            rhs[i], rhs[i + 1] = rhs[i + 1], rhs[i]
+
+            rules.append(RuleWithWeight(lhs, rhs, context, 1))
+
+        return rules
 
     @staticmethod
     def get_substitution_terminal_rules(t, terminals):
