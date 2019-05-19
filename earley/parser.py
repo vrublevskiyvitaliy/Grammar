@@ -13,7 +13,7 @@ class Parser(object):
     GAMMA_SYMBOL = 'GAMMA'
     TRIM_BY_LENGTH = False
 
-    def __init__(self, grammar, sentence, debug=False, start_rule='S'):
+    def __init__(self, grammar, sentence, debug=False, start_rule='ROOT'):
         '''Initialize parser with grammar and sentence'''
         self.grammar = grammar
         self.sentence = sentence
@@ -135,7 +135,7 @@ class Parser(object):
             i+= 1
 
     @staticmethod
-    def run(grammar_path, s, debug=False, start_rule='S'):
+    def run(grammar_path, s, debug=False, start_rule='ROOT'):
         grammar = Grammar.from_file(grammar_path)
 
         sentence = Sentence.from_string(s)

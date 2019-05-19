@@ -4,12 +4,11 @@ from earley.grammar import *
 BUILD_ALL = 'all'
 BUILD_MINI = 'mini'
 
-MINI_TREES = [19]
-MINI_TREES = xrange(100, 200, 1)
+MINI_TREES = [12]
 
-MODE = BUILD_ALL
+MODE = BUILD_MINI
 
-RULES_TRANSITIVE = True
+RULES_TRANSITIVE = False
 
 
 def get_trees():
@@ -19,6 +18,8 @@ def get_trees():
 
 
 def extract_rules(tree, grammar, source):
+    if len(tree['v']) > 1:
+            print tree['v'][1] + '/' + tree['v'][1] + '<' + tree['v'][0] + '>'
     if tree['children']:
         seq = []
         for el in tree['children']:
