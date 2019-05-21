@@ -62,6 +62,21 @@ class GrammarWithCorrection(Grammar):
         return grammar
 
     @staticmethod
+    def build_error_correction_grammar_from_grammar(grammar):
+        '''
+
+        Load grammar from file.
+        Add error correcting rules.
+
+        :param grammar: Grammar
+        :return: GrammarWithCorrection
+        '''
+
+        grammar = GrammarWithCorrection.transform_grammar(grammar)
+
+        return grammar
+
+    @staticmethod
     def from_file(filename):
         '''Returns a Grammar instance created from a text file.
            The file lines should have the format:

@@ -17,8 +17,11 @@ class ParserErrorCorrect(Parser):
         super(ParserErrorCorrect, self).__init__(grammar, sentence, debug, start_rule)
 
     @staticmethod
-    def run(grammar_path, s, debug=False, start_rule='ROOT'):
-        grammar = GrammarWithCorrection.build_error_correction_grammar(grammar_path)
+    def run(grammar_path, s, debug=False, start_rule='ROOT', grammar=None):
+        if grammar is None:
+            grammar = GrammarWithCorrection.build_error_correction_grammar(grammar_path)
+        else:
+            grammar = GrammarWithCorrection.build_error_correction_grammar_from_grammar(grammar)
         sentence = Sentence.from_string(s)
         earley = ParserErrorCorrect(grammar, sentence, debug, start_rule)
 
@@ -97,4 +100,5 @@ class ParserErrorCorrect(Parser):
                         )
                         # if Parser.TRIM_BY_LENGTH and new.get_left_len() > words_left:
                         #     continue
-                        chart.add_row(new)
+                        if weight < 4:
+                            chart.add_row(new)
