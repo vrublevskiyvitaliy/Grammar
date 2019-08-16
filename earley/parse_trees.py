@@ -56,11 +56,17 @@ class ParseTrees:
         self.length = len(parser)
 
         self.nodes = []
+        self.min_node = None
+
         for root in parser.complete_parses:
-            self.nodes.append({
+            node = {
                 'tree': self.build_nodes_ierarchical(root),
                 'weight': root.weight
-            })
+            }
+            if self.min_node is None or self.min_node['weight'] > node['weight']:
+                self.min_node = node
+
+        self.nodes.append(self.min_node)
 
     def __len__(self):
         '''Trees count'''

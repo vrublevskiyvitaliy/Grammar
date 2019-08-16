@@ -27,12 +27,16 @@ class ParserErrorCorrect(Parser):
 
         earley.parse()  # output sentence validity
         if earley.is_valid_sentence():
-            print '==> Sentence is valid.'
             trees = ParseTrees(earley)
-            print 'Valid parse trees:'
-            print trees
+            if debug:
+                print '==> Sentence is valid.'
+                print 'Valid parse trees:'
+                print trees
+            return trees.min_node['weight']
         else:
-            print '==> Sentence is invalid.'
+            if debug:
+                print '==> Sentence is invalid.'
+            return -1
 
     def prescan(self, chart, position):
         '''

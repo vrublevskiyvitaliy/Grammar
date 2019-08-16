@@ -12,6 +12,9 @@ def get_trees():
 def create_error(sentence):
     r = randint(0, 3)
     s = sentence[::]
+    if len(s) < 5:
+        r = randint(0, len(s) - 2)
+        del s[r + 1]
     if r == 0:
         r = randint(0, len(s) - 2)
         del s[r + 1]
@@ -35,11 +38,19 @@ def build_sentence(s):
 def main():
     c = []
     w = []
-    for tree in get_trees()[:50]:
+    statistic = {
+        'correct': 0,
+        'enable': 0,
+        'fixed': 0,
+    }
+
+    for tree in get_trees():
         parse_t = get_parse_tree(tree)
         grammar = get_grammar_by_trees([tree])
         correct_pos_tags = []
         extract_pos_tags(parse_t, correct_pos_tags)
+        if len(correct_pos_tags) > 20 or len(correct_pos_tags) < 5:
+            continue
         wrong_sentence = create_error(correct_pos_tags)
         cr = ' '.join([x[0] for x in correct_pos_tags])
         wr = ' '.join([x[0] for x in wrong_sentence])
@@ -52,13 +63,25 @@ def main():
         w.append(wr)
         print wr
         print correct_pos_tags
-        ParserErrorCorrect.run(
+        we = ParserErrorCorrect.run(
             grammar_path='dummy',
             grammar=grammar,
             s=build_sentence(wrong_sentence),
             debug=False,
         )
+        print we
+        if we == -1:
+            statistic['enable'] += 1
+        elif we == 0:
+            statistic['correct'] += 1
+        else:
+            statistic['fixed'] += 1
+
         print '***************'
+    print statistic
+    with open("errors.txt", "w") as myfile:
+        myfile.writelines(wr)
+
 
 
 if __name__ == '__main__':
