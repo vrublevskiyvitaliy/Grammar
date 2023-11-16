@@ -3,7 +3,7 @@ from parser.ParserErrorCorrect import ParserErrorCorrect
 
 
 def get_sentence():
-    return '{}}(()'
+    return '()(()'
 
 
 def build_sentence(s):
@@ -14,9 +14,9 @@ def build_sentence(s):
 def main():
     s = build_sentence(get_sentence())
     ParserErrorCorrect.run(
-        grammar_path='/Users/vitaliyvrublevskiy/projects/Grammar/grammars/rules_brackets.cfg',
+        grammar_path='/Users/vrublevskyi/Uni/Grammar/grammars/rules_brackets.cfg',
         s=s,
-        debug=False,
+        debug=True,
     )
 
 

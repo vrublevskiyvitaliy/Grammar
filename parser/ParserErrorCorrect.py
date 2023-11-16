@@ -22,6 +22,8 @@ class ParserErrorCorrect(Parser):
             grammar = GrammarWithCorrection.build_error_correction_grammar(grammar_path)
         else:
             grammar = GrammarWithCorrection.build_error_correction_grammar_from_grammar(grammar)
+
+        print grammar
         sentence = Sentence.from_string(s)
         earley = ParserErrorCorrect(grammar, sentence, debug, start_rule)
 

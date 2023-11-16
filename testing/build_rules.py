@@ -149,3 +149,36 @@ if __name__ == '__main__':
         main_mini()
     else:
         main()
+
+
+
+''''
+Our
+Precision   : 0.2105
+Recall      : 0.0964
+F_0.5       : 0.1702
+Baseline 1:
+Precision   : 0.2800
+Recall      : 0.0440
+F_0.5       : 0.1351
+Baseline 2:
+Precision   : 0.2727
+Recall      : 0.0373
+F_0.5       : 0.1205
+State-of-the art
+Precision   : 0.4490
+Recall      : 0.3492
+F_0.5       : 0.4247
+'''
+
+'''
+my:
+Precision   : 0.2353
+Recall      : 0.0483
+F_0.5       : 0.1326
+
+State-of-the art
+Precision   : 0.4710
+Recall      : 0.3593
+F_0.5       : 0.4435
+'''

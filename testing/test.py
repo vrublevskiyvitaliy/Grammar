@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from build_rules import *
 from random import randint
 from parser.ParserErrorCorrect import ParserErrorCorrect
@@ -11,6 +13,7 @@ def get_trees():
 
 def create_error(sentence):
     r = randint(0, 3)
+    r = 1
     s = sentence[::]
     if len(s) < 5:
         r = randint(0, len(s) - 2)
@@ -78,6 +81,7 @@ def main():
             statistic['fixed'] += 1
 
         print '***************'
+        #break
     print statistic
     with open("errors.txt", "w") as myfile:
         myfile.writelines(wr)

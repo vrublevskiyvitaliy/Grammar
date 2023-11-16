@@ -1,0 +1,667 @@
+|0|New and new technology has been introduced to the society .
+0|NNP CC JJ NN VBZ VBN VBN TO DT NN .
+|1|One possible outcome is that an environmentally-induced reduction in motorization levels in the richer countries will outweigh any rise in motorization levels in the poorer countries .
+1|CD JJ NN VBZ IN DT JJ NN IN NN NNS IN DT JJR NNS MD VB DT NN IN NN NNS IN DT JJR NNS .
+|2|Every person needs to know a bit about math , sciences , arts , literature and history in order to stand out in society .
+2|DT NN VBZ TO VB DT NN IN NN , NNS , NNS , NN CC NN IN NN TO VB RP IN NN .
+|3|While the travel company will most likely show them some interesting sites in order for their customers to advertise for their company to their family and friends , it is highly unlikely , that the company will tell about the sites that were not included in the tour - for example due to entrance fees that would make the total package price overly expensive .
+|Too long
+3|IN DT NN NN MD RBS JJ VBP PRP DT VBG NNS IN NN IN PRP$ NNS TO VB IN PRP$ NN TO PRP$ NN CC NNS , PRP VBZ RB JJ , IN DT NN MD VB IN DT NNS WDT VBD RB VBN IN DT NN : IN NN JJ TO VB NNS WDT MD VB DT JJ NN NN RB JJ .
+|4|Disadvantage is parking their car is very difficult .
+4|NN VBZ NN PRP$ NN VBZ RB JJ .
+|5|Bigger farming are use more chemical product and substance to feed fish .
+5|JJR NN VBP NN RBR JJ NN CC NN TO VB NN .
+|6|Forexample , My cousin is 12years old .
+6|NN , PRP$ NN VBZ NN JJ .
+|7|if it does , you will only get some misundrestood idea about that acticle but not the original one .
+7|IN PRP VBZ , PRP MD RB VB DT VBN NN IN DT NN CC RB DT VBN NN .
+|8|Secondly , chimp can also present the capability for grammer which means it can demonstrate the ability to combine words and be able to use grammatical constructions .
+|Too long
+8|RB , NN MD RB VB DT NN IN NN WDT VBZ PRP MD VB DT NN TO VB NNS CC VB JJ TO VB JJ NNS .
+|9|Nevertheless , this city is having a big change .
+9|RB , DT NN VBZ VBG DT JJ NN .
+|10|I think to learn facts is only an evidence if the students can work hard and if they are able to keep every detailled information as tought , but it 's definitly not an evidence for their intelligence .
+|Too long
+10|PRP VBP TO VB NNS VBZ RB DT NN IN DT NNS MD VB RB CC IN PRP VBP JJ TO VB DT JJ NN IN NN , CC PRP VBZ RB RB DT NN IN PRP$ NN .
+|11|Unforturntly , almost older people can not use internet , in spite of benefit of internet .
+11|RB , RB JJR NNS MD RB VB NN , IN NN IN NN IN NN .
+|12|So , if i have alot of information about this subject , i will taulk too much with knowledge but if i have general information for this subject , i will talk about this subjec with my limited knowlege and this case may be make me shame like when my brother asked me about some thing but i have not alot of information about this thing .
+|Too long
+12|RB , IN NNS VBP NN IN NN IN DT NN , NN MD VB RB JJ IN NN CC IN NNS VBP JJ NN IN DT NN , NN MD VB IN DT NN IN PRP$ JJ NN CC DT NN MD VB VB PRP VB IN WRB PRP$ NN VBD PRP IN DT NN CC NNS VBP RB VBN IN NN IN DT NN .
+|13|becuse if i see some one did somthing to may safe me time and engy and it wok 's i will do it .
+|Too long
+13|IN IN JJ VBP DT CD VBD VBG TO MD VB PRP NN CC NN CC PRP VBP POS NN MD VB PRP .
+|14|The government should think about the whole nature .
+14|DT NN MD VB IN DT JJ NN .
+|15|They will not be able to compete with other similar brands and the product will fizzle out or die .
+15|PRP MD RB VB JJ TO VB IN JJ JJ NNS CC DT NN MD VB RP CC VB .
+|16|People are now opening their eyes to the scenario when we would run out of fuel .
+16|NNS VBP RB VBG PRP$ NNS TO DT NN WRB PRP MD VB IN IN NN .
+|17|For me it was great because I need to talk on the phone locally and nationally for long periods of time .
+|Too long
+17|IN PRP PRP VBD JJ IN PRP VBP TO VB IN DT NN RB CC RB IN JJ NNS IN NN .
+|18|They only care if the effects are good and popular among the crowds .
+18|PRP RB VBP IN DT NNS VBP JJ CC JJ IN DT NNS .
+|19|That is why calculated risks , as one could call them , are the predecessors of big success , because they get people 's attention by giving people new options .
+|Too long
+19|DT VBZ WRB JJ NNS , IN CD MD VB PRP , VBP DT NNS IN JJ NN , IN PRP VBP NNS POS NN IN VBG NNS JJ NNS .
+|20|He said in other words that the more flouride may create damage in human body , specifically the bone .
+20|PRP VBD IN JJ NNS IN DT RBR JJ MD VB NN IN JJ NN , RB DT NN .
+|21|When these people create their new ideas others often look very strange on them .
+21|WRB DT NNS VBP PRP$ JJ NNS NNS RB VBP RB JJ IN PRP .
+|22|You will learn to socialize with people .
+22|PRP MD VB TO VB IN NNS .
+|23|No ohter transportation concept has been as successful as the car , not only because the goog street and highway system throughout the United States and Europe , but only because off the fact , that people love their cars .
+|Too long
+23|DT NN NN NN VBZ VBN RB JJ IN DT NN , RB RB IN DT JJ NN CC NN NN IN DT NNP NNPS CC NNP , CC RB IN IN DT NN , IN NNS VBP PRP$ NNS .
+|24|If they prefer to choose cars than motor bike , that means there will be many cars .
+24|IN PRP VBP TO VB NNS IN NN NN , PRP VBZ EX MD VB JJ NNS .
+|25|That 's why he is a legend in these days and people repect him .
+25|DT VBZ WRB PRP VBZ DT NN IN DT NNS CC NNS NN PRP .
+|26|for example , in math club , teachers usually teach us how to solve a math problem using vary ways .
+26|IN NN , IN NN NN , NNS RB VBP PRP WRB TO VB DT NN NN VBG JJ NNS .
+|27|In order hand , when I was a fresh man in my college , I could concentrate on my favorit subjects .
+|Too long
+27|IN NN NN , WRB PRP VBD DT JJ NN IN PRP$ NN , PRP MD VB IN PRP$ JJ NNS .
+|28|I have an IBM computer and my laptop is DELL .
+28|PRP VBP DT NNP NN CC PRP$ NN VBZ NNP .
+|29|Air in China is not so clean because of cars .
+29|NNP IN NNP VBZ RB RB JJ IN IN NNS .
+|30|When price of gas goes up , the consumer do not want buy gas for fuels .
+30|WRB NN IN NN VBZ RB , DT NN VBP RB VB VB NN IN NNS .
+|31|although , learning more subjects gives us a huge knowledge which is make me sucssesfu in my study .
+31|IN , VBG JJR NNS VBZ PRP DT JJ NN WDT VBZ VB PRP PRP IN PRP$ NN .
+|32|When you're making a tour guide trip , you already have a everything settled from the time you're departing to the time you arrive .
+|Too long
+32|WRB PRP VBP VBG DT JJ NN NN , PRP RB VBP DT NN VBN IN DT NN PRP VBP VBG TO DT NN PRP VBP .
+|33|On the other hand , although in Turkey the public transportation is getting developed especially in the two big cities , that is , Ankara and istanbul , it is still nothing compared to Sweden .
+|Too long
+33|IN DT JJ NN , IN IN NNP DT JJ NN VBZ VBG VBN RB IN DT CD JJ NNS , DT VBZ , NNP CC NN , PRP VBZ RB NN VBN TO NNP .
+|34|This rebuffs the reading passage 's claim that there is no improvement .
+34|DT VBZ DT NN NN POS NN IN EX VBZ DT NN .
+|35|As they are involved with study , they donot get enough time to look after their community .
+35|IN PRP VBP VBN IN NN , PRP VBP VB JJ NN TO VB IN PRP$ NN .
+|36|However , I strongly maintained that traveling by their own gives a lot of advantages .
+36|RB , PRP RB VBD IN VBG IN PRP$ JJ VBZ DT NN IN NNS .
+|37|The even ask themself how this kind of things did n't cross their mind .
+37|DT RB VB PRP WRB DT NN IN NNS VBD RB VB PRP$ NN .
+|38|People tends to choose other medias , and that is why litterature is in danger .
+38|NNS VBZ TO VB JJ NNS , CC DT VBZ WRB NN VBZ IN NN .
+|39|I cast doubt that twenty years is too short time to prove the problem .
+39|PRP VBD NN WDT CD NNS VBZ RB JJ NN TO VB DT NN .
+|40|So for these reasons i really believe that it 's important to have a broad knowledge on different subjects , instead of being focused on just one , because sometime the answer that we are searching for , we can easily find it in a field that can seems not related to our purpose .
+|Too long
+40|RB IN DT NNS VBP RB VBP IN PRP VBZ JJ TO VB DT JJ NN IN JJ NNS , RB IN VBG VBN IN RB CD , IN PDT DT NN IN PRP VBP VBG IN , PRP MD RB VB PRP IN DT NN WDT MD VBZ RB VBN TO PRP$ NN .
+|41|I am pleased to know intelligent peple and learn about things which I do n't know .
+41|PRP VBP JJ TO VB JJ NNS CC VB JJ NNS WDT PRP VBP RB VB .
+|42|To resolve this problem , the governments of the cities are likely to improve the public transportation system by building new subway system and adding more lines for buses .
+|Too long
+42|TO VB DT NN , DT NNS IN DT NNS VBP JJ TO VB DT JJ NN NN IN VBG JJ NN NN CC VBG JJR NNS IN NNS .
+|43|I know lots of old people who go to parties , stay always in contact with others people .
+43|PRP VBP NNS IN JJ NNS WP VBP TO NNS , VB RB IN NN IN JJ NNS .
+|44|But these thing seem to hard for old people , they move so hardly , and do n't have health body to play this thing like sports .
+|Too long
+44|CC DT NN VBP TO VB IN JJ NNS , PRP VBP RB RB , CC VBP RB VB NN NN TO VB DT NN IN NNS .
+|45|For example , if you understand the idea that all diseases , caused by microorganisms , are treated with the antibiotics , you will never use antidepressants .
+|Too long
+45|IN NN , IN PRP VBP DT NN IN DT NNS , VBN IN NNS , VBP VBN IN DT NNS , PRP MD RB VB NNS .
+|46|I like about that , but after that it 's gradually starting boring and finally I did n't have interesting about all the stuff .
+|Too long
+46|PRP VBP IN DT , CC IN IN PRP VBZ RB VBG NN CC RB PRP VBD RB VB VBG IN PDT DT NN .
+|47|In her salary we cant buy some car because we are planing to finish our hause in Binangonan , Rizal and we will planing to finish my study in Boston .
+|Too long
+47|IN PRP$ NN PRP VBP VB DT NN IN PRP VBP VBG TO VB PRP$ NN IN NNP , NNP CC PRP MD VBG TO VB PRP$ NN IN NNP .
+|48|so the information technology and advanced technology are so much increased .
+48|IN DT NN NN CC VBD NN VBP RB RB VBN .
+|49|Even more relevant to the seduction of advertisement is the fact that quite frequently those images of perfection placed in front of our eyes are just mirages and illusions , bodies touched up by computer programs and therefore , they do not resemble reality at all .
+|Too long
+49|RB RBR JJ TO DT NN IN NN VBZ DT NN IN RB RB DT NNS IN NN VBN IN NN IN PRP$ NNS VBP RB NNS CC NNS , NNS VBD RP IN NN NNS CC RB , PRP VBP RB VB NN IN DT .
+|50|As the professor claimed the details and examples to strengthen the position of reading passage , which I , in the following pargarghs , would like to provide the evidence to present the whole views .
+|Too long
+50|IN DT NN VBD DT NNS CC NNS TO VB DT NN IN VBG NN , WDT PRP , IN DT JJ NN , MD VB TO VB DT NN TO VB DT JJ NNS .
+|51|In the advertisement that he shows in the media , newspapers , magazines , and public spaces , he clearly says that the product is made with products of high quality in technology .
+|Too long
+51|IN DT NN IN PRP VBZ IN DT NNS , NNS , NNS , CC JJ NNS , PRP RB VBZ IN DT NN VBZ VBN IN NNS IN JJ NN IN NN .
+|52|We have a lot of paper have to write .
+52|PRP VBP DT NN IN NN VBP TO VB .
+|53|A person with broad knowlege will help him to renovate .
+53|DT NN IN JJ NN MD VB PRP TO VBN .
+|54|The development of biomechanics has made this possible .
+54|DT NN IN NNS VBZ VBN DT JJ .
+|55|This inadequate amount of fuel force us to use less cars .
+55|DT JJ NN IN NN NN PRP TO VB JJR NNS .
+|56|One of this important element is internet .
+56|CD IN DT JJ NN VBZ CD .
+|57|You can only be successfull by learning new stuff and trying it too , by being an open and creative mind .
+|Too long
+57|PRP MD RB VB VBN IN VBG JJ NN CC VBG PRP RB , IN VBG DT JJ CC JJ NN .
+|58|Firstly the striped bass consume large quantitiy of menhaden , secondly this fish is also a source of protein for farm animal , and fishing industry gives work some people in Virginia .
+|Too long
+58|RB DT JJ NN NN JJ NN IN NN , RB DT NN VBZ RB DT NN IN NN IN NN NN , CC NN NN VBZ VBP DT NNS IN NNP .
+|59|They were drove settlements in other domain .
+59|PRP VBN JJ NN IN JJ NN .
+|60|The time line about this danger , which i have already given in the above discussion is so predictable that one can have even calculations about it if he / she has both the population and existing fuel count .
+|Too long
+60|DT NN NN IN DT NN , WDT VBP VBP RB VBN IN DT JJ NN VBZ RB JJ IN CD MD VB VBN NNS IN PRP IN PRP VBZ PRP VBZ CC DT NN CC VBG NN NN .
+|61|I think people should travel by making decision by themselves with sevral reasons .
+61|PRP VBP NNS MD VB IN VBG NN IN PRP IN JJ NNS .
+|62|Indeed , they threat lot of freshwater fish species because they need to eat and to find different kind of food in the oceans .
+|Too long
+62|RB , PRP NN NN IN NN JJ NNS IN PRP VBP TO VB CC TO VB JJ NN IN NN IN DT NNS .
+|63|For example , if the city says that 8am ~ 9 am is the most busiest time , than worker would argues that they drive a bit later
+|Too long
+63|IN NN , IN DT NN VBZ IN CD $ CD VBP VBZ DT RBS JJ NN , IN NN MD VB IN PRP VBP DT NN RB
+|64|Educators should provide opportunities for them to learn enough knowledge to survive the real world .
+64|NNS MD VB NNS IN PRP TO VB JJ NN TO VB DT JJ NN .
+|65|For example , when I am studying for tests or doing my homework , my grandparents can go out and do what they enjoy .
+|Too long
+65|IN NN , WRB PRP VBP VBG IN NNS CC VBG PRP$ NN , PRP$ NNS MD VB RP CC VB WP PRP VBP .
+|66|traditional enclopedias are written by trained expert for academic rigor that can not really achieve .
+66|JJ NNS VBP VBN IN JJ NN IN JJ NN WDT MD RB RB VB .
+|67|By the time up everyone should be gathered up in a certain place .
+67|IN DT NN RP NN MD VB VBN RP IN DT JJ NN .
+|68|Else twenty years down the lane every major city would end up being a pile of metal junkyard , with no place to move around .
+|Too long
+68|RB CD NNS IN DT NN DT JJ NN MD VB RP VBG DT NN IN JJ NN , IN DT NN TO VB RB .
+|69|And what are those risks ?
+69|CC WP VBP DT NNS .
+|70|In contrast , the speaker casts doubt on the conclusion .
+70|IN NN , DT NN VBZ NN IN DT NN .
+|71|In this movie father has handicapped .
+71|IN DT NN NN VBZ VBN .
+|72|Fo example , in this genaration people watch movies and listen to musics more than read books and novels .
+72|IN NN , IN DT NN NNS VBP NNS CC VB TO NNS JJR IN VB NNS CC NNS .
+|73|In malysia , there are a lot of cars .
+73|IN NN , EX VBP DT NN IN NNS .
+|74|So they are free to do all sorts of things , even if thez are cinsidered as dangerous or irrisponsble , such as bungee-jumping .
+|Too long
+74|IN PRP VBP JJ TO VB DT NNS IN NNS , RB IN NNS VBP VBN IN JJ CC JJ , JJ IN NN .
+|75|I think most of the people will like that in a busy world , but I don't thing it will happen the next twenty years .
+|Too long
+75|PRP VBP JJS IN DT NNS MD VB DT IN DT JJ NN , CC PRP VBP RB NN PRP MD VB DT JJ NN NNS .
+|76|Every one would expect to leave his owns and secrets dreams like to be a painter , a writter ...
+76|DT NN MD VB TO VB PRP$ VBZ CC NNS VBZ IN TO VB DT NN , DT NN :
+|77|I ANSWERED THE QUESTION AND I GOT GOOD IMPRESSION FROM BOTH LECTURER AND FRIENDS .
+77|PRP CC DT NN CC PRP VBD JJ NN NNP CC PRP VBD PRP .
+|78|While , according to listening passage it seems fair for people te increase the tax price because they will be able to save money for other taxes they pay .
+|Too long
+78|IN , VBG TO VBG NN PRP VBZ JJ IN NNS JJ VB DT NN NN IN PRP MD VB JJ TO VB NN IN JJ NNS PRP VBP .
+|79|Home work will help you to manage your time if not you might be using those time in some other purposes .
+|Too long
+79|NNP NN MD VB PRP TO VB PRP$ NN IN RB PRP MD VB VBG DT NN IN DT JJ NNS .
+|80|I mean our homecontry because we can speak Japanese and can use Japanese .
+80|PRP VBP PRP$ NN IN PRP MD VB JJ CC MD VB JJ .
+|81|New kinds of vehicles will be invented with new technology than today .
+81|NNP NNS IN NNS MD VB VBN IN JJ NN IN NN .
+|82|This would have definately required him to take out immense amount of time from his work and he stands as a perfect example with whom the youngsters of today relate .
+|Too long
+82|DT MD VB RB VBN PRP TO VB RP JJ NN IN NN IN PRP$ NN CC PRP VBZ IN DT JJ NN IN WP DT NNS IN NN NN .
+|83|They follow the way the Sun goes from the east to the west .
+83|PRP VBP DT NN DT NNP VBZ IN DT NN TO DT NN .
+|84|it 's the time to take a rest looking back in your present .
+84|PRP VBZ DT NN TO VB DT NN VBG RB IN PRP$ JJ .
+|85|I thought it is kind of ridicurous , but we have to do as tour guide said .
+85|PRP VBD PRP VBZ NN IN JJ , CC PRP VBP TO VB IN NN NN VBD .
+|86|So , if Japan has such common sense since long time ago , even after twenty years for sure , people will aim to own a car and still ride a car to show people that they are " rich " .
+|Too long
+86|RB , IN NNP VBZ JJ JJ NN IN JJ NN IN , RB IN CD NNS IN JJ , NNS MD VB TO VB DT NN CC RB VB DT NN TO VB NNS IN PRP VBP  JJ  .
+|87|An example that would make this categorization problemmatic is an architect .
+87|DT NN WDT MD VB DT NN JJ VBZ DT NN .
+|88|The incoming generation will not ride a two wheeler .
+88|DT JJ NN MD RB VB DT CD NN .
+|89|And also the markting can do some adjust about the changing .
+89|CC RB DT NN MD VB DT VBP IN DT NN .
+|90|This is supported by national and internation policy which is presenting attractively the advantages of going abroad , make self-experiences in other countries and cultures , learning foreign-languages while staying in a country where this language is spoken , and so on .
+|Too long
+90|DT VBZ VBN IN JJ CC NN NN WDT VBZ VBG RB DT NNS IN VBG RB , VB NNS IN JJ NNS CC NNS , VBG NNS IN VBG IN DT NN WRB DT NN VBZ VBN , CC RB IN .
+|91|Even if we are failed , We have to try to get a new things .
+91|RB IN PRP VBP VBN , PRP VBP TO VB TO VB DT JJ NNS .
+|92|He explained that the methane which is derived is a non biological process .
+92|PRP VBD IN DT NN WDT VBZ VBN VBZ DT JJ JJ NN .
+|93|I put into this group of people , everyone who have arrive to that success with his own work , i mean people who work very hard and try for example to develop new kinds of work , of technologies or someone who tries to do his work in another way to arrive the goal that he want easily .
+|Too long
+93|PRP VBD IN DT NN IN NNS , NN WP VBP VBN TO DT NN IN PRP$ JJ NN , JJ VBP NNS WP VBP RB RB CC VB IN NN TO VB JJ NNS IN NN , IN NNS CC NN WP VBZ TO VB PRP$ NN IN DT NN TO VB DT NN IN PRP VB RB .
+|94|Confidence comes naturally since perfection is its along .
+94|NN VBZ RB IN NN VBZ PRP$ RB .
+|95|Reasons is pay for them and teach the more than other institute .
+95|NNS VBZ NN IN PRP CC VB DT JJR IN JJ NN .
+|96|I totally agree that the youth today are not sparing sufficient time helping their communities .
+96|PRP RB VBP IN DT NN NN VBP RB VBG JJ NN VBG PRP$ NNS .
+|97|Nowadays , the society is changing drasticly .
+97|RB , DT NN VBZ VBG RB .
+|98|and through text book , students are more engaged .
+98|CC IN NN NN , NNS VBP RBR VBN .
+|99|On the other hand , a chef that try new tastes will be recognize and he or she will gain a place in the cooking world .
+|Too long
+99|IN DT JJ NN , DT NN WDT VBP JJ NNS MD VB JJ CC PRP CC PRP MD VB DT NN IN DT NN NN .
+|100|Also , I think we will thank this animals to everything that they have done to us no matter what .
+100|RB , PRP VBP PRP MD VB DT NNS TO NN IN PRP VBP VBN TO PRP DT NN WDT .
+|101|When I grow up , I start to understand what he said is quite right .
+101|WRB PRP VBP RP , PRP VBP TO VB WP PRP VBD VBZ RB JJ .
+|102|Other one is a gambler which means that people always try the new things and take risks .
+102|DT JJ CD VBZ DT NN WDT VBZ IN NNS RB VBP DT JJ NNS CC VB NNS .
+|103|Last month , I needed to buy digtal-camera .
+103|JJ NN , PRP VBD TO VB PRP .
+|104|In the world oil price very high right now .
+104|IN DT NN NN NN RB RB RB RB .
+|105|The cause of the Tunguska explosion is asteroid .
+105|DT NN IN DT NNP NN VBZ NN .
+|106|after we know and learn the facts , it will be easier for us to understand ideas and concepts .
+106|IN PRP VBP CC VBP DT NNS , PRP MD VB JJR IN PRP TO VB NNS CC NNS .
+|107|they did not get the ideas or any concepts about what they learn .
+107|PRP VBD RB VB DT NNS CC DT NNS IN WP PRP VBP .
+|108|And at the end , if you take a risk and you success in that , you surely will become a successful person with all the merits , and maybe also the awards , you merit .
+|Too long
+108|CC IN DT NN , IN PRP VBP DT NN CC PRP NN IN DT , PRP RB MD VB DT JJ NN IN PDT DT NNS , CC RB RB DT NNS , PRP VBP .
+|109|In my essy i want to focus on : how impotant is for students to learn facts .
+109|IN PRP$ NN PRP VBP TO VB IN : WRB JJ VBZ IN NNS TO VB NNS .
+|110|I naturally get to know that I do n't really want to know .
+110|PRP RB VBP TO VB IN PRP VBP RB RB VB TO VB .
+|111|Let 's say your interest lies in paintings .
+111|VB PRP VB PRP$ NN VBZ IN NNS .
+|112|However , what makes a student excellent is to both understand the concept and learn the facts .
+112|RB , WP VBZ DT NN JJ VBZ TO DT VB DT NN CC VB DT NNS .
+|113|lrenikg the studens the ideas have many advantegis :
+113|VBG DT NNS DT NNS VBP JJ NNS :
+|114|Do I want to risk my 2 years savings for a trip to Spain or do I want to use my kids college fund to start up my business ?
+|Too long
+114|VBP PRP VBP TO VB PRP$ CD NNS NNS IN DT NN TO NNP CC VBP PRP VBP TO VB PRP$ NNS NN NN TO VB RP PRP$ NN .
+|115|So even the government is expecting the increase in the use of four wheeler .
+115|RB RB DT NN VBZ VBG DT NN IN DT NN IN CD NN .
+|116|and you can have chanse to make a your person to help you .
+116|CC PRP MD VB NN TO VB DT PRP$ NN TO VB PRP .
+|117|He or she would not be able to discuss spesific problems just because he does not know them .
+117|PRP CC PRP MD RB VB JJ TO VB JJ NNS RB IN PRP VBZ RB VB PRP .
+|118|For example when I went to Bangkok , Thailand few years ago , I experienced I was a stranger in downtown .
+|Too long
+118|IN NN WRB PRP VBD TO NNP , NNP JJ NNS RB , PRP VBD PRP VBD DT NN IN NN .
+|119|I have specific reasons for this .
+119|PRP VBP JJ NNS IN DT .
+|120|Actually it might not be true .
+120|RB PRP MD RB VB JJ .
+|121|We still have to burn down forest to make land for farming and the result is bird will lose more of their habitat .
+|Too long
+121|PRP RB VBP TO VB RP JJS TO VB NN IN VBG CC DT NN VBZ VBN MD VB JJR IN PRP$ NN .
+|122|By the same token , people will learn many different intellages by doing so many things but they just learn it 's appeals not get any crutial informations and wisdom form it .
+|Too long
+122|IN DT JJ NN , NNS MD VB JJ JJ NNS IN VBG RB JJ NNS CC PRP RB VBP PRP VBZ NNS RB VB DT JJ NNS CC NN NN PRP .
+|123|On the other hand , if you specialize in one specific subject such as physics you will never help him .
+123|IN DT JJ NN , IN PRP VBP IN CD JJ NN JJ IN PRP PRP MD RB VB PRP .
+|124|This is how we can hit the job market very early and proof that we are capable of doing job in an better manner .
+|Too long
+124|DT VBZ WRB PRP MD VB DT NN NN RB RB CC VB IN PRP VBP JJ IN VBG NN IN DT JJR NN .
+|125|To judge a person 's contribution in terms of time would be specious .
+125|TO VB DT NN POS NN IN NNS IN NN MD VB JJ .
+|126|New experiences to somebory is the same of the challenger and challenger is moviment , rason to some people been continue living .
+|Too long
+126|NNP NNS TO NN VBZ DT JJ IN DT NN CC NN VBZ JJ , NN TO DT NNS VBN JJ NN .
+|127|our social wil be a lovely social , If the dram can cometure i think we must learn more knowledge .
+127|PRP$ JJ NN VB DT JJ JJ , IN DT NN MD VB PRP VBP PRP MD VB RBR NN .
+|128|For example when you read your school 's book as a first time you will not understand any thing but when read it second time you understand it .
+|Too long
+128|IN NN WRB PRP VBP PRP$ NN POS NN IN DT JJ NN PRP MD RB VB DT NN CC WRB VBP PRP JJ NN PRP VBP PRP .
+|129|This is the goverment rule that they have compulsory attand this seminar .
+129|DT VBZ DT NN NN IN PRP VBP JJ VB DT NN .
+|130|They might put it on the label , but they do n't say it on tv advertising .
+130|PRP MD VB PRP IN DT NN , CC PRP VBP RB VB PRP IN NN NN .
+|131|For example , Many scientists and engineers are study about cars that make no more tough sound , and smoke .
+131|IN NN , JJ NNS CC NNS VBP NN IN NNS WDT VBP DT JJR JJ NN , CC NN .
+|132|Without the empirical experience , i think , the learner tend to forget all the information he or she have learned throuhout his or her learning process in a long term .
+|Too long
+132|IN DT JJ NN , NN VBP , DT NN VBP TO VB PDT DT NN PRP CC PRP VBP VBN RP PRP$ CC PRP$ JJ NN IN DT JJ NN .
+|133|First , disking can be an alternative to prescribed burning .
+133|RB , NN MD VB DT NN TO VB NN .
+|134|By just knowing culture of a different country that we are living and not born on , we wo n't be able to live .
+|Too long
+134|IN RB VBG NN IN DT JJ NN IN PRP VBP VBG CC RB VBN IN , PRP MD RB VB JJ TO VB .
+|135|somebody who no give ans just take can not live within communities .
+135|NN WP DT WP NNS RB VB MD RB VP VB IN NNS .
+|136|Court coats are very high and many number of desputed tickets are seen .
+136|NNP NNS VBP RB JJ CC JJ NN IN JJ NNS VBP VBN .
+|137|And what is more effective than loads of people working towards the same aim ?
+137|CC WP VBZ RBR JJ IN NNS IN NNS VBG IN DT JJ NN .
+|138|If we have this quality then no one can beat us .
+138|IN PRP VBP DT NN RB DT PRP MD VB PRP .
+|139|you have 30 typically an effective response will contain a minimum you will be satisfiy culture expienrence and and fit your test .
+|Too long
+139|PRP VBP CD RB DT JJ NN MD VB DT NN PRP MD VB JJ NN NN CC CC VB PRP$ NN .
+|140|But I only use this solfware to win a lot of prize , some of them have important influence in my country .
+|Too long
+140|CC PRP RB VBP DT NN TO VB DT NN IN NN , DT IN PRP VBP JJ NN IN PRP$ NN .
+|141|If the sharp can not catch you mind , how can they sell the products to customer .
+141|IN DT JJ MD RB VB PRP VB , WRB MD PRP VB DT NNS TO PRP .
+|142|The cutting the dead trees is called salvage logging .
+142|DT VBG DT JJ NNS VBZ VBN NN VBG .
+|143|that 's why centralized , attributes , and bussines owner reduce thir bussinis is not respond for the rise of factories .
+|Too long
+143|DT VBZ WRB JJ , NNS , CC NNS NN VB NN NN VBZ RB VB IN DT NN IN NNS .
+|144|second birds navigate by landmarks like river , coastlines , and moutains .
+144|JJ NNS VBP IN NNS IN NN , NNS , CC NNS .
+|145|A tour guide is generally a person who knows a great deal about the country , its most beautiful places , most visited ones , and the so on .
+|Too long
+145|DT NN NN VBZ RB DT NN WP VBZ DT JJ NN IN DT NN , PRP$ RBS JJ NNS , JJS JJ NNS , CC DT RB IN .
+|146|They have to contact variety fields to find out what their interests are .
+146|PRP VBP TO VB NN NNS TO VB RP WP PRP$ NNS VBP .
+|147|Unfortunately in the most of the countries the functioning of the public transport is not perfecty organised .
+147|RB IN DT JJS IN DT NNS DT NN IN DT JJ NN VBZ RB RB VBN .
+|148|If you think of the consumtions of them , fishes have less fat and a lot of nutrients there .
+148|IN PRP VBP IN DT NNS IN PRP , NNS VBP JJR JJ CC DT NN IN NNS RB .
+|149|The public transpotation in the city may not be able to cope with this huge amount of people flow .
+149|DT JJ NN IN DT NN MD RB VB JJ TO VB IN DT JJ NN IN NNS NN .
+|150|Second , we learn many academic subjects , after that we learn specialize in one specific subject .
+150|RB , PRP VBP JJ JJ NNS , IN IN PRP VBP VB IN CD JJ NN .
+|151|This does n't mean that because you take risks you are going to succed .
+151|DT VBZ RB VB IN IN PRP VBP NNS PRP VBP VBG TO VB .
+|152|one of the most important problem is accidents for sure everyday millions of people dies jus because of the drivers not being carefull as a matter affect i do believe that there will be less cars in twenty years but this will happen just for one reasen that we will use somethink else .
+|Too long
+152|CD IN DT RBS JJ NN VBZ NNS IN JJ JJ NNS IN NNS NNS VBP IN IN DT NNS RB VBG VBN IN DT NN NN NN VBP VBP IN EX MD VB JJR NNS IN CD NNS CC DT MD VB RB IN CD NN IN PRP MD VB NN RB .
+|153|internet offer a good opportunity for people that travel for work , for a student , for work .
+153|NN VBP DT JJ NN IN NNS WDT VBP IN NN , IN DT NN , IN NN .
+|154|Can you ever visualize what a chaos our society would suffer if every individual considers himself / herself an expert in every given field ?
+|Too long
+154|MD PRP RB VB WP DT NN PRP$ NN MD VB IN DT NN VBZ PRP VB PRP DT NN IN DT VBN NN .
+|155|In this sense , I would introduce the concepts of two aspects with a datailed analysis , and then it will comes to the conclusion .
+|Too long
+155|IN DT NN , PRP MD VB DT NNS IN CD NNS IN DT JJ NN , CC RB PRP MD VBZ TO DT NN .
+|156|In my case , my yonger brother need to more than academic knowledge .
+156|IN PRP$ NN , PRP$ NN RB VB TO JJR IN JJ NN .
+|157|Due to this , I feel that specialized students have more opportunity in future .
+157|JJ TO DT , PRP VBP IN VBN NNS VBP RBR NN IN DT .
+|158|Moreover before the oil and gas gone scientist will make new car that go by electricity or by sun light .
+158|RB IN DT NN CC NN VBN NN MD VB JJ NN WDT VBP IN NN CC IN JJ NN .
+|159|However , I firmly believe that students have to learn broad knowledge of many academic subjects .
+159|RB , PRP RB VBP IN NNS VBP TO VB JJ NN IN JJ JJ NNS .
+|160|I larned many kind of subject , also I could make difrent types friends .
+160|PRP VBD JJ NN IN NN , RB PRP MD VB JJ NNS NNS .
+|161|On top of that , even we are willing to spend the time to draft the travel plan , we have no idea on which travel sites are must-see .
+|Too long
+161|IN NN IN DT , RB PRP VBP JJ TO VB DT NN TO VB DT NN NN , PRP VBP DT NN IN WDT NN NNS VBP JJ .
+|162|They need to have a global vision before deciding what the like , and the way of obtaining it is simply studying a broad syllabus .
+|Too long
+162|PRP VBP TO VB DT JJ NN IN VBG WP DT JJ , CC DT NN IN VBG PRP VBZ RB VBG DT JJ NN .
+|163|In order to understand these , and more importantly , to link these together , that wisdom will duly serve him .
+|Too long
+163|IN NN TO VB DT , CC RBR RB , TO VB DT RB , DT NN MD VB VB PRP .
+|164|We can use it .
+164|PRP MD VB PRP .
+|165|Some people can encounter with people we have no idea about .
+165|DT NNS MD VB IN NNS PRP VBP DT NN IN .
+|166|When my grandmother getting old , she could not move her body easily .
+166|WRB PRP$ NN VBG JJ , PRP MD RB VB PRP$ NN RB .
+|167|As a tour guide , the person has to be familiar with the place he or she is touring .
+167|IN DT NN NN , DT NN VBZ TO VB JJ IN DT NN PRP CC PRP VBZ VBG .
+|168|Three other costumer have not started using the product because they dont have anything to hang it with .
+168|CD JJ NN VBP RB VBN VBG DT NN IN PRP VBP VBP RB TO VB PRP IN .
+|169|And in the place where there is no train we can not help using cars .
+169|CC IN DT NN WRB EX VBZ DT NN PRP MD RB VB VBG NNS .
+|170|you have to teach your child since he or she was antel they graw up .
+170|PRP VBP TO VB PRP$ NN IN PRP CC PRP VBD IN PRP VBP RP .
+|171|If students have to study for history for example it is often enough to just learn the facts but on the other hand studing for physics or maths needs the understanding of the concepts .
+|Too long
+171|IN NNS VBP TO VB IN NN IN NN PRP VBZ RB JJ TO RB VB DT NNS CC IN DT JJ NN VBG IN NNS CC NNS VBZ DT NN IN DT NNS .
+|172|For example , the subway in New York , bullet trains in Japan , underground tube trains in Singapore and the sky trains in Bangkok travel at lightening speed .
+|Too long
+172|IN NN , DT NN IN NNP NNP , NN NNS IN NNP , JJ NN NNS IN NNP CC DT NN NNS IN NNP NN IN VBG NN .
+|173|First , young people have a active mind .
+173|RB , JJ NNS VBP DT JJ NN .
+|174|Obviously the unreplaciable examination and less enemy can bring huge advance to fulfill the defination about success .
+174|RB DT JJ NN CC JJR NN MD VB JJ NN TO VB DT NN IN NN .
+|175|Young people nowdays do n't give enough time to helping their communities .
+175|JJ NNS RB VBP RB VB JJ NN TO VBG PRP$ NNS .
+|176|The commercial was defenately more impressive than the product itself .
+176|DT NN VBD RB RBR JJ IN DT NN PRP .
+|177|And one of them was my friend who had seriouse prblems with her health .
+177|CC CD IN PRP VBD PRP$ NN WP VBD JJ NNS IN PRP$ NN .
+|178|To this day , I still remember what we studied that day in class .
+178|TO DT NN , PRP RB VBP WP PRP VBD DT NN IN NN .
+|179|Ihad good life in my cauntry but everything I got from my patents .
+179|VBD JJ NN IN PRP$ NN CC NN PRP VBD IN PRP$ NNS .
+|180|But if the student is going only learning things whithout knowing the concept then not any company is give apportunity to that person because he does not know the concept of its related branch so by this way its create a problem in the future .
+|Too long
+180|CC IN DT NN VBZ VBG RB VBG NNS IN VBG DT NN RB RB DT NN VBZ JJ NN TO DT NN IN PRP VBZ RB VB DT NN IN PRP$ JJ NN RB IN DT NN PRP$ NN DT NN IN DT NN .
+|181|Third , stone tower of east coast is making unnatural way also this tower is unusual in Europe so non Europian might be made this tower .
+|Too long
+181|NNP , NN NN IN JJ NN VBZ VBG JJ NN RB DT NN VBZ JJ IN NNP RB RB JJ MD VB VBN DT NN .
+|182|secondly , it is an unfair action because it will effect the low-income American .
+182|RB , PRP VBZ DT JJ NN IN PRP MD VB DT JJ NNP .
+|183|The factories are increasing sulfur dioxide to the air every year .
+183|DT NNS VBP VBG NN NN TO DT NN DT NN .
+|184|It's result in people more mature , strong and calm in front problems of the life , because they undertand the problems go away and it depend what kind manner everybory look the face of the problem .
+|Too long
+184|PRP VBZ NN IN NNS JJR NN , JJ CC NN IN JJ NNS IN DT NN , IN PRP VBP DT NNS VBP RB CC PRP VBP WP NN NN JJ VBP DT NN IN DT NN .
+|185|for example work on a project , .
+185|NP IN DT NN IN DT NN , .
+|186|this speace must change gerden .
+186|DT NN MD VB NN .
+|187|However , exist people that thing that when the people have a forty years ever a older person .
+187|RB , VBP NNS WDT NN WDT WRB DT NNS VBP RB NN NNS RB DT JJR NN .
+|188|It is worthy of note that not every body will succeed when taking a risk , but that is not enough to deteir anybody who wishes to take one .
+|Too long
+188|PRP VBZ JJ IN NN IN RB DT NN MD VB WRB VBG DT NN , CC DT VBZ RB RB TO VB NN WP VBZ TO VB CD .
+|189|apparently , I got a Japanese friend in the Japen , his name is Tomo .
+189|RB , PRP VBD DT JJ NN IN DT NNP , PRP$ NN VBZ RB .
+|190|when they do some work they thinks they have to fine work in time .
+190|WRB PRP VBP DT NN PRP VBZ PRP VBP TO DT NN IN NN .
+|191|As the gasoline tax rasing , it will help the vehicle company to make more cars to sell it to people .
+|Too long
+191|IN DT NN NN NN , PRP MD VB DT NN NN TO VB JJR NNS TO VB PRP TO NNS .
+|192|Ignorance of striped bass will abbreviate our earning also it has some astonishing effects on our health .
+192|NN IN JJ NN MD VB PRP$ NN RB PRP VBZ DT JJ NNS IN PRP$ NN .
+|193|Maybe they have some disadvantages in humanity .
+193|RB PRP VBP DT NNS IN NN .
+|194|In the lecture , that zebra mussel is not really a serious threat have been proven .
+194|IN DT NN , DT JJ NN VBZ RB RB DT JJ NN VBP VBN VBN .
+|195|I think it will be lost .
+195|PRP VBP PRP MD VB VBN .
+|196|I expect human can make new material to replace gas but it is very difficult .
+196|PRP VBP JJ MD VB JJ NN TO VB NN CC PRP VBZ RB JJ .
+|197|Ideas and motives for the war are more important to know because from them one might draw some conclusions and it might change something inside the student .
+|Too long
+197|NNS CC NNS IN DT NN VBP RBR JJ TO VB IN IN PRP CD MD VB DT NNS CC PRP MD VB NN IN DT NN .
+|198|Everything is possible which we can't imagine .
+198|NN VBZ JJ WDT PRP MD RB VB .
+|199|Although there are some rules for protect young peopel such as limiting of aging in movies and preview about the bad aspect of programs before s , it is just made for little kids not young peole like high shcool or university student .
+|Too long
+199|IN EX VBP DT NNS IN NN JJ NN JJ IN NN IN VBG IN NNS CC NN IN DT JJ NN IN NNS IN NN , PRP VBZ RB VBN IN JJ NNS RB JJ VBP JJ JJ NN CC NN NN .
+|200|However , the fact that they most of the time do not reflect the actual quality of a product decreases the reliability of the advertisements .
+|Too long
+200|RB , DT NN IN PRP JJS IN DT NN VB RB VB DT JJ NN IN DT NN VBZ DT NN IN DT NNS .
+|201|We seem to have a lot of problem with those even if we have more good materials than in the past .
+|Too long
+201|PRP VBP TO VB DT NN IN NN IN DT RB IN PRP VBP JJR JJ NNS IN IN DT NN .
+|202|We can be fatalist an say that with the developing of the third world , the problem will worsen .
+202|PRP MD VB NN DT VBP IN IN DT NN IN DT JJ NN , DT NN MD VB .
+|203|This things can make us more successful in life ; even though were that successful we must continue are work , we should take our chances to the greater heights .
+|Too long
+203|DT NNS MD VB PRP RBR JJ IN NN : RB IN VBD IN JJ PRP MD VB VBP NN , PRP MD VB PRP$ NNS TO DT JJR NNS .
+|204|For the greeks philosopher Plato an Aristotle , the capacity for understand ideas and concepts , the intelligence as the main ability of the human soul , is the part of ourselves that makes us the being we actually are .
+|Too long
+204|IN DT NN NN NNP DT NNP , DT NN IN JJ NNS CC NNS , DT NN IN DT JJ NN IN DT JJ NN , VBZ DT NN IN NNS WDT VBZ PRP DT VBG PRP RB VBP .
+|205|In conclusion understanding the concepts is the more important than learning the facts , because it 's the ultimate gole of learning the facts .
+|Too long
+205|IN NN VBG DT NNS VBZ DT RBR JJ IN VBG DT NNS , IN PRP VBZ DT JJ NN IN VBG DT NNS .
+|206|I basically feel that young people do enjoy their life more than older people do .
+206|PRP RB VBP IN JJ NNS VBP VB PRP$ NN JJR IN JJR NNS VBP .
+|207|First , the ships not only helped them to spread but also they killed by ships .
+207|RB , DT NNS RB RB VBD PRP TO VB CC RB PRP VBD IN NNS .
+|208|they might be bored of reading a complex passage .
+208|PRP MD VB VBN IN VBG DT JJ NN .
+|209|But it is possible to have a broad knowledge of many academis subjects without being specialized in one particular topic ?
+209|CC PRP VBZ JJ TO VB DT JJ NN IN JJ JJ NNS IN VBG VBN IN CD JJ NN .
+|210|So she decides to work in a Nursing Home because she wants to provide care for elderly people .
+210|IN PRP VBZ TO VB IN DT NNP NNP IN PRP VBZ TO VB NN IN JJ NNS .
+|211|This demonstrates the undeniable fact that it is bebeficial to having differnt experiences .
+211|DT VBZ DT JJ NN IN PRP VBZ JJ TO VBG JJ NNS .
+|212|Therefore , they will be more deep thinking person and good for thier future , so theacher should be required to take courses every five years .
+|Too long
+212|RB , PRP MD VB RBR JJ NN NN CC JJ IN JJR NN , IN RB MD VB VBN TO VB NNS DT CD NNS .
+|213|In my case , I am working more than 200 hours a month , in order to get money required to pay back to a bank -LRB- I borrowed some money for buying my house . -RRB- .
+|Too long
+213|IN PRP$ NN , PRP VBP VBG JJR IN CD NNS DT NN , IN NN TO VB NN VBN TO VB RB TO DT NN NN PRP VBD DT NN IN VBG PRP$ NN . NN .
+|214|because , student must do homework .
+214|IN , NN MD VB NN .
+|215|it 's make a good partner .
+215|PRP VBZ VB DT JJ NN .
+|216|As a result , she could get a job that she badly wanted but she did n't expected because many people were flock to this company .
+|Too long
+216|IN DT NN , PRP MD VB DT NN IN PRP RB VBD CC PRP VBD RB VBN RB JJ NNS VBD RB TO DT NN .
+|217|Maybe for the ecologistics in twenty years there will be fewer cars in use than there are today not for the citizens that everyday must go to the office .
+|Too long
+217|RB IN DT NNS IN CD NNS RB MD VB JJR NNS IN NN IN EX VBP NN RB IN DT NNS WDT VBP MD VB TO DT NN .
+|218|At this stage , youth require experience of older people to fight this depression .
+218|IN DT NN , NN VBP NN IN JJR NNS TO VB DT NN .
+|219|In fact this device was different from its competitor products .
+219|IN NN DT NN VBD JJ IN PRP$ NN NNS .
+|220|Also we do not have to care about other people , it means there is a privacy of us and we can talk loudly or might be able to sing .
+|Too long
+220|RB PRP VBP RB VB TO VB IN JJ NNS , PRP VBZ EX VBZ DT NN IN PRP CC PRP MD VB RB CC MD VB JJ TO VB .
+|221|But i find out that the quality of the bat was very bad .
+221|CC PRP VBP RP IN DT NN IN DT NN VBD RB JJ .
+|222|some people only running to the work or used the undertairn , but if you have your cai you can used your car go to your work here .
+|Too long
+222|DT NNS RB VBG TO DT NN CC VBD DT JJ , CC IN PRP VBP PRP$ NN PRP MD VB PRP$ NN VBP TO PRP$ NN RB .
+|223|government rising the tax on gasoline .
+223|NN VBG DT NN IN NN .
+|224|The professor also says that soy bean should be used as fod for the fish .
+224|DT NN RB VBZ IN DT NN MD VB VBN IN NN IN DT NN .
+|225|He was successful aleady in his fields of living electric equipments , but , his began to new dominant of electronics technology and was succeed .
+|Too long
+225|PRP VBD JJ NN IN PRP$ NNS IN VBG JJ NNS , CC , PRP$ VBD TO JJ NN IN NNS NN CC VBD VB .
+|226|A good company hires goods buzzers , these buzzers do not lie to consumers , that they use there words to let consumers know the goods is real , they do not praise the goods .
+|Too long
+226|DT JJ NN VBZ NNS NNS , DT NNS VBP RB VB TO NNS , IN PRP VBP EX NNS TO VB NNS VB DT NNS VBZ JJ , PRP VBP RB VB DT NNS .
+|227|Travelling in a group especially with a tour guide , helps us to make our trip be more productive .
+227|VBG IN DT NN RB IN DT NN NN , VBZ PRP TO VB PRP$ NN VB RBR JJ .
+|228|On the other hand , the reading passage states that using chemicals is clearly not such a good idea because it can develop parasitic infections in the human body .
+|Too long
+228|IN DT JJ NN , DT NN NN NNS IN VBG NNS VBZ RB RB JJ DT JJ NN IN PRP MD VB JJ NNS IN DT JJ NN .
+|229|When they down to the forest then produced fire .
+229|WRB PRP RB TO DT NN RB VBD NN .
+|230|So both the lecture an the reading think that other arcaeologist monuments in the area from Kingdom period .
+230|IN DT DT NN DT DT NN VBP IN JJ NN NNS IN DT NN IN NNP NN .
+|231|If I have one sujest .
+231|IN PRP VBP CD NN .
+|232|To be sure , we Japanese take part in destroying enviroment because we consume most wood .
+232|TO VB JJ , PRP VBP JJS NN IN VBG NN IN PRP VBP JJS NN .
+|233|So i asked my student , how did he think about my lesson , and tried to find out where the proublem it is .
+|Too long
+233|RB JJ VBD PRP$ NN , WRB VBD PRP VB IN PRP$ NN , CC VBD TO VB RP WRB DT NN PRP VBZ .
+|234|That means if I have an broad knowledge in politics then I m aware that 'where to speak what ' .
+|Error
+234|DT VBZ IN PRP VBP DT JJ NN IN NNS RB PRP VBP JJ IN FW TO VB WP '' .
+|235|he also tells fact concepts to the students .
+235|PRP RB VBZ NN NNS TO DT NNS .
+|236|That was a very beautiful dream in my mind at that time .
+236|DT VBD DT RB JJ NN IN PRP$ NN IN DT NN .
+|237|After majoring in any feild of studies a student can not adjust immidiatly with the practical world .
+237|IN VBG IN DT NN IN NNS DT NN MD RB VB RB IN DT JJ NN .
+|238|By contrast , the lecture claims that quality of discussion is the most important instead of the numbers of discussion .
+238|IN NN , DT NN VBZ IN NN IN NN VBZ DT RBS JJ RB IN DT NNS IN NN .
+|239|Concepts of a subject gives us the background of main streams of a subject we are going to learn and study .
+|Too long
+239|NNS IN DT NN VBZ PRP DT NN IN JJ NNS IN DT NN PRP VBP VBG TO VB CC VB .
+|240|I will outline in the below paragraphs my arguments in favor of this statement .
+240|PRP MD VB IN DT NN IN PRP$ NNS IN NN IN DT NN .
+|241|this example proves that knowing the fact is less important compare to knowing the concepts related to it .
+241|DT NN VBZ IN VBG DT NN VBZ RBR JJ NN TO VBG DT NNS VBN TO PRP .
+|242|Einstien 's seminal theory of relativity is proved by facts .
+242|NNP POS JJ NN IN NN VBZ VBN IN NNS .
+|243|While i was there someone tried to steal my bag and passport .
+243|IN NN VBD PRP NN VBD TO VB PRP$ NN CC NN .
+|244|Second the rouds can not be damged because raising the tax there will be much less cars .
+244|JJ DT NN MD RB VB VBN IN VBG DT NN EX MD VB RB JJR NNS .
+|245|Second , the scroll lists are huge gold like 35 kilograms , so it is price will be more bigger different .
+|Too long
+245|JJ , DT NN NNS VBP JJ NN IN CD NNS , IN PRP VBZ NN MD VB RBR JJR JJ .
+|246|I dont have a car but i dreaming it off .
+246|PRP VBP VBP DT NN CC NN VBG PRP RP .
+|247|Because the rest of the period the way they work could be different .
+247|IN DT NN IN DT NN DT NN PRP VBP MD VB JJ .
+|248|This will definitely cause some promblems .
+248|DT MD RB VB DT NNS .
+|249|Nowadays each of the family member owns a car .
+249|RB DT IN DT NN NN VBZ DT NN .
+|250|When you are able to understand ideas and concepts and with this are able to understand structures of thinking this can help you a lot .
+|Too long
+250|WRB PRP VBP JJ TO VB NNS CC NNS CC IN DT VBP JJ TO VB NNS IN VBG DT MD VB PRP DT NN .
+|251|In America , alot of family have more than one cars , and futhermore some of them have three or four .
+|Too long
+251|IN NNP , NN IN NN VBP JJR IN CD NNS , CC RB DT IN PRP VBP CD CC CD .
+|252|Thus i see more people opting for their own car in the near future .
+252|RB PRP VBP JJR NNS VBG IN PRP$ JJ NN IN DT JJ NN .
+|253|So people who they do not give enough time to helping their communities , they should repair this .
+253|IN NNS WP PRP VBP RB VB JJ NN TO VBG PRP$ NNS , PRP MD VB DT .
+|254|Otherwise , he / she may feel inadequate one day if he / she furthers his / her study .
+254|RB , PRP VBZ PRP MD VB JJ CD NN IN PRP VBZ PRP VBZ PRP$ NN PRP$ NN .
+|255|Most of us will understand better when the ideas and the concepts of the war is shown and we can get vey exited with it .
+|Too long
+255|JJS IN PRP MD VB RB WRB DT NNS CC DT NNS IN DT NN VBZ VBN CC PRP MD VB RB VBN IN PRP .
+|256|So what shall I do ?
+256|RB WP MD PRP VB .
+|257|I could not give much time to any of the sport so that i could be a great sportman .
+257|PRP MD RB VB JJ NN TO DT IN DT NN IN IN PRP MD VB DT JJ NN .
+|258|For example ; Smoking , I know that smoking is bad .
+258|IN NN : NNP , PRP VBP IN NN VBZ JJ .
+|259|This degree would enable me to branch out and look into other fields that involve some basic engineering .
+259|DT NN MD VB PRP TO VB RP CC VB IN JJ NNS WDT VBP DT JJ NN .
+|260|When someone did a legal behavior , he has to justified by law .
+260|WRB NN VBD DT JJ NN , PRP VBZ TO VBN IN NN .
+|261|Therefore , I am going to tell about this question thorough my experiences .
+261|RB , PRP VBP VBG TO VB IN DT NN IN PRP$ NNS .
+|262|Lastly , for the economic reason , it is not beneficial becasue the cost of the equipment abd staff required to control fires is very expensive .
+|Too long
+262|RB , IN DT JJ NN , PRP VBZ RB JJ NN DT NN IN DT NN JJ NN VBN TO VB NNS VBZ RB JJ .
+|263|then there chance to shift him other parts of cricket .
+263|RB EX VBZ NN TO VB PRP JJ NNS IN NN .
+|264|First of all , He argued that Amrican will not ignor the " ecocertified " as there are so many advertisiment now .
+|Too long
+264|NNP IN RB , PRP VBD IN NNP MD RB VB DT  JJ  IN EX VBP RB JJ NN RB .
+|265|The reasons and examples will belowed this eassy to support my opinion .
+265|DT NNS CC NNS MD VB DT JJ TO VB PRP$ NN .
+|266|But factully Secondly , It need to experiance .
+266|CC RB RB , PRP VBP TO VB .
+|267|A student who chooses to study at university has to become well acquainted with different methods of expanding current ideas and concepts .
+|Too long
+267|DT NN WP VBZ TO VB IN NN VBZ TO VB RB JJ IN JJ NNS IN VBG JJ NNS CC NNS .
+|268|Therefore french revolution happend in the middle age in Eruope because of that reasons . "
+|Error
+268|RB JJ NN NN IN DT JJ NN IN NNP IN IN DT NNS .
+|269|It is therefore important for the respective governments and international bodies to try and reduce the negative consequences of this trend .
+|Too long
+269|PRP VBZ RB JJ IN DT JJ NNS CC JJ NNS TO VB CC VB DT JJ NNS IN DT NN .
+|270|It mentions about the cane toad which threatens many local species in Australia .
+270|PRP VBZ IN DT NN NN WDT VBP JJ JJ NNS IN NNP .
+|271|This will help to creat brotherhood realtionship .
+271|DT MD VB TO VB NN NN .
+|272|By trial and error I succeedded which gave me a very good feeling about myself .
+272|IN NN CC NN PRP VBD WDT VBD PRP DT RB JJ NN IN PRP .
+|273|As we know that fish is taken as a meal it is harmful for the human beings to do fish farming .
+|Too long
+273|IN PRP VBP DT NN VBZ VBN IN DT NN PRP VBZ JJ IN DT JJ NNS TO VB JJ NN .
+|274|Although understanding the concepts is important , sometimes facts are the only solution for them to learn .
+274|IN VBG DT NNS VBZ JJ , RB NNS VBP DT JJ NN IN PRP TO VB .
+|275|And the prasdent of compeny lake Toyota or Ford , they successful because they know how to start ther compeny and makeing a smart thing .
+|Too long
+275|CC DT NN IN NNS VBP NNP CC NNP , PRP JJ IN PRP VBP WRB TO VB NN NN CC VBG DT JJ NN .
+|276|Instead , they would help with the house or with farming .
+276|RB , PRP MD VB IN DT NN CC IN NN .
+|277|but lecturer shows different angle of the systm ...
+277|CC NN VBZ JJ NN IN DT NN :
+|278|People will buy more cars and take advantage of this mode of transportation in the days ahead .
+278|NNS MD VB JJR NNS CC VB NN IN DT NN IN NN IN DT NNS RB .
+|279|annd we can save many time cthe the second , the tour guide will be interduce the spot of enqui culture , then we can enjoy the deedly trip , not only go over thereto stay a few time .
+|Too long
+279|IN PRP MD VB JJ NN VBZ DT JJ , DT NN NN MD VB VB DT NN IN JJ NN , RB PRP MD VB DT RB NN , RB RB VB RP NN VB DT JJ NN .
+|280|Understand how they work would give students a better lesson .
+280|JJ WRB PRP VBP MD VB NNS DT JJR NN .
+|281|Scond , Menzied points that chinese ships in the 1400s used very distinctive anchors that were round stones with a hole in the middle .
+|Too long
+281|NN , NNP VBZ IN JJ NNS IN DT CD VBD RB JJ NNS WDT VBD VBN NNS IN DT NN IN DT NN .
+|282|Young people can work easily and can search any information in a few minutes .
+282|JJ NNS MD VB RB CC MD VB DT NN IN DT JJ NNS .
+|283|It can certainly be the case .
+283|PRP MD RB VB DT NN .
+|284|In a group trip , we are forced to the goup time schedules .
+284|IN DT NN NN , PRP VBP VBN TO DT NN NN NNS .
+|285|Probably , by using my own car this would have been much more difficult and stressful , if not impossible .
+285|RB , IN VBG PRP$ JJ NN DT MD VB VBN RB RBR JJ CC JJ , IN RB JJ .
